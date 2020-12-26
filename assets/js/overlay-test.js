@@ -1,16 +1,15 @@
 function startTest() {
-    
+    let box = document.getElementById("test-box")
+    box.innerHTML = "";
+
     writeTest()
     
 }
 
 function writeTest() {
-let content = document.createElement("span");
-let word = document.createTextNode(findWord());
-content.appendChild(word);
-
+ 
 let box = document.getElementById("test-box");
-box.appendChild(content);
+box.appendChild(findPara());
 
 }
 
@@ -21,7 +20,18 @@ function findWord() {
     return word;
 }
 
-function findPara (){
+function findPara () {
+    var totalWords = 300;
+    let content = document.createElement('p');
+    let para = "";
+    
+    for(var i = 0; i < totalWords; i++) {
+    let str = `<span class = "wordings">${(findWord())}</span>`;
+    para += str;
+    }
+    content.innerHTML = para;
+
+    return content;    
 
 }
 
