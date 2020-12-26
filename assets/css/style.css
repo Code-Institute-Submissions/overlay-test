@@ -1,0 +1,17 @@
+div {
+    padding: 20px;
+}
+
+button {
+    margin: 0.2rem; 
+    padding: 0.5rem;
+}
+.test-area {
+    padding: 50px;
+}
+.testing-area{
+    height: 200px;
+    width: 60%;
+    
+    border: 3px solid black;
+}
