@@ -35,16 +35,12 @@ function findPara () {
 
 }
 
-function addOverlay() {
- // adding event listeners to the buttons adding class on click
- // remove all classes and then add testing-area + overlay color class 
- let test = document.getElementsByClassName('overlay-btns');
-    console.log(test);
-}
+function addOverlay(color){
+        overlay = document.getElementById("overlay-effect");
+        overlay.style.backgroundColor = color;
+    }
 
 
-
-document.addEventListener("DOMContentLoaded", addOverlay());
 
 function stopTest() {
 

@@ -20,19 +20,19 @@
     <section>
         <div class = "test-area">
             <div class="overlay-btns-container">
-                <button id="overlay-none" class="overlay-btns">No Overlay</button>
-                <button id="overlay-m-green" class="overlay-btns">Mint Green</button>
-                <button id="overlay-l-green" class="overlay-btns">Lime Green</button>
-                <button id="overlay-rose" class="overlay-btns">Rose</button>
-                <button id="overlay-pink" class="overlay-btns">Pink</button>
-                <button id="overlay-purple" class="overlay-btns">Purple</button>
-                <button id="overlay-yellow" class="overlay-btns">Yellow</button>
-                <button id="overlay-blue" class="overlay-btns">Blue</button>
-                <button id="overlay-aqua" class="overlay-btns">Aqua</button>
-                <button id="overlay-grey" class="overlay-btns">Grey</button>
+                <button onclick = "addOverlay('rgba(0,0,0,0.0)');" class="overlay-btns">No Overlay</button>
+                <button onclick = "addOverlay('rgba(62,239,118,0.3)');" class="overlay-btns">Mint Green</button>
+                <button onclick = "addOverlay('rgba(25,245,0,0.3)');" class="overlay-btns">Lime Green</button>
+                <button onclick = "addOverlay('rgba(218,106,152,0.3)');" class="overlay-btns">Rose</button>
+                <button onclick = "addOverlay('rgba(245,0,168,0.3)');" class="overlay-btns">Pink</button>
+                <button onclick = "addOverlay('rgba(61,6,109,0.3)');" class="overlay-btns">Purple</button>
+                <button onclick = "addOverlay('rgba(219,235,9,0.3)');" class="overlay-btns">Yellow</button>
+                <button onclick = "addOverlay('rgba(9,46,235,0.3)');" class="overlay-btns">Blue</button>
+                <button onclick = "addOverlay('rgba(64,177,168,0.3)');" class="overlay-btns">Aqua</button>
+                <button onclick = "addOverlay('rgba(0,0,0,0.3)');" class="overlay-btns">Grey</button>
             </div>
             <div class="test-contatiner">
-                <div class = "overlay-effect "></div>
+                <div id = "overlay-effect"></div>
                 <div class = "testing-area">
                     <p id = "test-box">
 

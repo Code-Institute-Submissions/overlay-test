@@ -12,12 +12,12 @@ button {
     padding: 30px;
 }
 
-.overlay-effect {
-    background-color: rgba(168, 29, 150, 0.5);     
+#overlay-effect {
+         
     z-index: 1;
 }
 
-.testing-area, .overlay-effect{
+.testing-area, #overlay-effect{
     height: 25%;
     width: 60%;    
     padding: 30px;
