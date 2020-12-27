@@ -8,8 +8,8 @@ function startTest() {
 
 function writeTest() {
  
-let box = document.getElementById("test-box");
-box.appendChild(findPara());
+    let box = document.getElementById("test-box");
+    box.appendChild(findPara());
 
 }
 
@@ -34,6 +34,17 @@ function findPara () {
     return content;    
 
 }
+
+function addOverlay() {
+ // adding event listeners to the buttons adding class on click
+ // remove all classes and then add testing-area + overlay color class 
+ let test = document.getElementsByClassName('overlay-btns');
+    console.log(test);
+}
+
+
+
+document.addEventListener("DOMContentLoaded", addOverlay());
 
 function stopTest() {
 
