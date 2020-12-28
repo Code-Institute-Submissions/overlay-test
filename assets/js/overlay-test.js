@@ -3,6 +3,7 @@ function startTest() {
     box.innerHTML = "";
 
     writeTest()
+    startTimer()
     
 }
 
@@ -15,10 +16,10 @@ function writeTest() {
 
 function findWord() {
     let words = ["is", "look", "come", "see", "play", "cat", "dog", "when", "up", "at", "when", "and", "eat", "the", "my", "for", "to", "you" ];
-    word = words[Math.floor(Math.random()*words.length)]
+    let word = words[Math.floor(Math.random()*words.length)]
     word = (word + " ");
     return word;
-}
+} 
 
 function findPara () {
     var totalWords = 300;
@@ -26,8 +27,17 @@ function findPara () {
     let para = "";
     
     for(var i = 0; i < totalWords; i++) {
-    let str = `<span class = "wordings">${(findWord())}</span>`;
-    para += str;
+    let thisWord= findWord();    
+    let str = `<span class = "wordings">${thisWord}</span>`;
+    let find =  para.slice(-12);
+    let missWord = find.includes(thisWord);
+    console.log(find);    
+    console.log(missWord); 
+        if (missWord == true ) {
+            continue;        
+        } else {
+            para += str;        
+        }
     }
     content.innerHTML = para;
 
@@ -38,9 +48,13 @@ function findPara () {
 function addOverlay(color){
         overlay = document.getElementById("overlay-effect");
         overlay.style.backgroundColor = color;
-    }
+}
 
 
+
+function startTimer() {
+
+}
 
 function stopTest() {
 
