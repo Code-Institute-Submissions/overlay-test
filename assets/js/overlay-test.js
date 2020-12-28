@@ -87,7 +87,7 @@ function findPara () {
     
     for(let i = 0; i < totalWords; i++) {
         let thisWord= findWord();    
-        let str = `<span class = "wordings" data-word-number=${i} onclick = "test(event)">${thisWord}</span>`;
+        let str = `<span class = "wordings" data-word-number=${i} onclick = "test(this.getAttribute('data-word-number'))">${thisWord}</span>`;
         let findEndStr =  para.slice(-12);
         let missWord = findEndStr.includes(thisWord);
         
@@ -105,18 +105,17 @@ function findPara () {
 
 function startTimer() {
     setTimeout(stopTest, 30000)
-
 }
 
 function stopTest() {
-    alert ("TIMES UP! Click the last word you read!");
-
-    
+    alert ("TIMES UP! Click the last word you read!");    
 }
 
-function test() {
-    alert( "WELL SOMEONE HAS BEEN CHECKING OUT MY GITHUB..... Looking at you Tony")
-}
+function test(data_word_number) {    
+    data_word_number++
+    alert( "WELL SOMEONE HAS BEEN CHECKING OUT MY GITHUB..... Looking at you Tony. " + "You read..." + data_word_number + " words!")
+    }        
+
 
 function getResults() {
 
