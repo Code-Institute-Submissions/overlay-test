@@ -54,15 +54,13 @@ function buildButtons() {
     
     for(i = 0; i < colors.length; i++) {
         let button = document.createElement("button");
-        let overlay = document.getElementsByClassName("overlay-btns")
         let addColor = colors[i].colorValue; 
-        console.log(addColor);
-
+        
         button.innerHTML = colors[i].name;
         button.className = "overlay-btns";
         button.addEventListener("click", function() {
             let overlay = document.getElementById("overlay-effect")
-            overlay.style.backgroundColor = addColor;
+            overlay.style.backgroundColor = addColor; 
             
         });
 
@@ -102,21 +100,22 @@ function findPara () {
     testBox.innerHTML = para;
 
     return testBox;    
-
-}
-
-function test() {
-    alert ("test");
-    
 }
 
 
 function startTimer() {
+    setTimeout(stopTest, 30000)
 
 }
 
 function stopTest() {
+    alert ("TIMES UP! Click the last word you read!");
 
+    
+}
+
+function test() {
+    alert( "WELL SOMEONE HAS BEEN CHECKING OUT MY GITHUB..... Looking at you Tony")
 }
 
 function getResults() {
