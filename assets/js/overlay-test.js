@@ -1,8 +1,10 @@
 const buildBtn = document.addEventListener("DOMContentLoaded", buildButtons);
-
-const testBox = document.getElementById("test-box")
+const testBox = document.getElementById("test-box");
 const words = ["is", "look", "come", "see", "play", "cat", "dog", "when", "up", "at", "when", "and", "eat", "the", "my", "for", "to", "you" ];
 const totalWords = 300;
+const resultsTable = document.getElementById("results-table");
+let overlay = document.getElementById("overlay-effect");
+
 const colors = [
      {
        'name': 'No Overlay',
@@ -50,18 +52,20 @@ const colors = [
     }
 ];
 
+
 function buildButtons() {
     
     for(i = 0; i < colors.length; i++) {
         let button = document.createElement("button");
         let addColor = colors[i].colorValue; 
+        let color= colors[i].name;
+        overlay.dataset.colorName = "No Overlay";
         
         button.innerHTML = colors[i].name;
         button.className = "overlay-btns";
-        button.addEventListener("click", function() {
-            let overlay = document.getElementById("overlay-effect")
-            overlay.style.backgroundColor = addColor; 
-            
+        button.addEventListener("click", function() {            
+            overlay.style.backgroundColor = addColor;         
+            overlay.dataset.colorName = color;
         });
 
         let buttonDiv = document.getElementById("btns");
@@ -71,7 +75,7 @@ function buildButtons() {
 
 function startTest() {
     testBox.innerHTML = "";
-
+ 
     findPara()
     startTimer()
 }
@@ -104,22 +108,75 @@ function findPara () {
 
 
 function startTimer() {
-    setTimeout(stopTest, 30000)
+    setTimeout(stopTest, 1000)
 }
 
 function stopTest() {
-    alert ("TIMES UP! Click the last word you read!");    
+    alert ("TIMES UP! Click the last word you read!");
+    overlay.style.zIndex = "0"; 
+    if (resultsTable.hasChildNodes() == true ) {
+        console.log("table already made")
+    } else {
+        createTable()
+    }
 }
 
 function test(data_word_number) {    
-    data_word_number++
-    alert( "WELL SOMEONE HAS BEEN CHECKING OUT MY GITHUB..... Looking at you Tony. " + "You read..." + data_word_number + " words!")
-    }        
+    data_word_number++;
+    alert( "You read..." + data_word_number + " words with " + overlay.dataset.colorName )
+    overlay.style.zIndex = "1"; 
+    createRow(data_word_number)
+    
+
+}        
+ 
+function createTable(){
+    let tbody = document.createElement('tbody')    
+    let row = document.createElement('tr');   
+
+    let head1 = document.createElement('th');
+    let head2 = document.createElement('th');
+    
+    let heading1 = document.createTextNode('Overlay Colour');
+    let heading2 = document.createTextNode('Words Read');
+
+
+    head1.appendChild(heading1);
+    head2.appendChild(heading2);
+    row.appendChild(head1);
+    row.appendChild(head2);
+    tbody.appendChild(row)
+
+    resultsTable.appendChild(tbody);
+    console.log(resultsTable)
+}
+
+function createRow(data_word_number) {
+    
+
+    let row = document.createElement("tr");
+
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+
+    let data1 = document.createTextNode(overlay.dataset.colorName)
+    let data2 = document.createTextNode(data_word_number)
+    
+    td1.appendChild(data1);
+    td2.appendChild(data2);
+    row.appendChild(td1);
+    row.appendChild(td2);
+
+    resultsTable.appendChild(row);
+
+}
 
 
 function getResults() {
 
 }
+
+
 
 function compareResults() {
 

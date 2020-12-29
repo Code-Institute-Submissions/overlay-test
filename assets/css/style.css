@@ -14,7 +14,7 @@ button {
 
 #overlay-effect {
          
-    z-index: 0;
+    z-index: 1;
 }
 
 .testing-area, #overlay-effect{
@@ -27,4 +27,12 @@ button {
 
 .start-btn {
     margin-top:300px;
+}
+
+.wordings:hover {
+    background-color: rgb(247, 248, 203);
+}
+
+th, td {
+    padding: 20px;
 }
