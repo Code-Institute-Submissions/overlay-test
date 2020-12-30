@@ -113,21 +113,23 @@ function startTimer() {
 
 function stopTest() {
     alert ("TIMES UP! Click the last word you read!");
-    overlay.style.zIndex = "0"; 
-    if (resultsTable.hasChildNodes() == true ) {
-        console.log("table already made")
-    } else {
-        createTable()
-    }
+    overlay.style.pointerEvents = "none";    
+    
 }
 
 function test(data_word_number) {    
     data_word_number++;
     alert( "You read..." + data_word_number + " words with " + overlay.dataset.colorName )
-    overlay.style.zIndex = "1"; 
-    createRow(data_word_number)
+    overlay.style.pointerEvents = "inherit";
+   
+   if (resultsTable.hasChildNodes() == true ) {
+        console.log("table already made")
+        createRow(data_word_number)
+    } else {
+        createTable()
+        createRow(data_word_number)
+    }
     
-
 }        
  
 function createTable(){
@@ -146,18 +148,21 @@ function createTable(){
     row.appendChild(head1);
     row.appendChild(head2);
     tbody.appendChild(row)
+    tbody.id = "tbody";
 
     resultsTable.appendChild(tbody);
-    console.log(resultsTable)
+    
 }
 
 function createRow(data_word_number) {
-    
+    let tbody = document.getElementById("tbody")
 
     let row = document.createElement("tr");
 
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
+    td1.classList.add("overlay-color");
+    td2.classList.add("word-count");
 
     let data1 = document.createTextNode(overlay.dataset.colorName)
     let data2 = document.createTextNode(data_word_number)
@@ -167,24 +172,15 @@ function createRow(data_word_number) {
     row.appendChild(td1);
     row.appendChild(td2);
 
-    resultsTable.appendChild(row);
+    tbody.appendChild(row);
+    
 
 }
 
-
-function getResults() {
-
-}
-
-
-
-function compareResults() {
+function getResult(){
 
 }
- 
-function writeResult() {
 
-}
 
 function resultsAdvice() {
 

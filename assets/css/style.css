@@ -15,6 +15,7 @@ button {
 #overlay-effect {
          
     z-index: 1;
+    pointer-events: inherit;
 }
 
 .testing-area, #overlay-effect{
