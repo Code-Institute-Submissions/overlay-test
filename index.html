@@ -17,7 +17,7 @@
     <header>
         <div class="logo">
         <h1>The Overlay Test </h1>
-        <h3>Testing for Signs of Visual Stress</h3>
+        <!-- <h3>Testing for Signs of Visual Stress</h3> -->
         </div>
         <nav class = "nav-bar">
             <a href ="index.html" class = "nav-bar-item active" >Home</a>
@@ -26,7 +26,29 @@
         </nav>
     </header>
     <section>
+        <div class="images">
+            <img href= "assets/images/visual-stress.png">
+        </div>
+        <div class="about ">
+            <h2 class = "headings">About the Overlay Test</h2>
+            <p> This Overlay Test is designed to aid in the detection of signs of Visual stress, the test below will help you to find out if a coloured overlay may increase your reading speed.  This tool is not a diagnosis for Visual Stress but may help identify if an overlay may be useful. If you or you child suffers from reading difficulties, eyestrain or headaches you may want to find out whether or not you have a visual stress issue.  We advise that you have your eyes checked regularly by an Optometrist.  Please check out our advise page for more information on Visual Stress and where to get additional support, advise and materials. </p>
+            <div class="symptoms-container">
+                <h3 class = "headings">What are signs of Visual Stress</h3>
+                <p>Visual Stress can vary from person to person but symptoms may include:</p>
+                <ul class="text-left">
+                    <li>Headaches</li>
+                    <li>Blurring of print</li>
+                    <li>Noticing white "rivers" running down the page.  The white background stands out more than text above it.</li>
+                    <li>Losing place within text, skipping words or lines</li>
+                    <li>Words appearing to move or jump</li>
+                    <li>Eyestrain</li>
+                    <li>Difficultiy in understanding the text being read</li>
+                    <li>Glare on page</li>
+                </ul>
+            </div>    
+        </div>
         <div class = "test-area">
+            <h4 class = "headings">The Overlay Test</h4>
             <div class="overlay-btns-container" id = "btns">                
             </div>
             <div class="test-container">                
@@ -41,21 +63,22 @@
             <button class="start-btn" onclick="startTest()">Start Test</button>
         </div> 
         <div class="results-area">
-            <h3>Results</h3>
+            <h3 class = "headings">Results</h3>
+            <h3> Total words you read in 30 seconds</h3>
             <table id="results-table" name = "results"></table>
             <form onsubmit = "return sendMail(this)">  
                 <label for ="name">Name</label>
                 <input type = "text" id= "name" name = "name" required>
                 <label for ="email">Email</label>
-                <input type = "email" id= "email" name = "email" required>            
-                <button class = "email-btn" type = "submit">Email My Results</button>    
+                <input type = "email" id= "email" name = "email" required>             
+                <button id = "email-btn" type = "submit">Email My Results</button>    
             </form>
         </div>
     </section>
     <footer>
-        <p>Copyright @ Rebecca Kelsall</p>
-        <p>Want to have this feature for your website? <span class="click here"><a href = "contact.html">click here</a></span></p>
-        <p>Contact Info</p>
+        <p class = "text-center">Want to have this feature for your website? <span class="click here"><a href = "contact.html">click here</a></span></p>
+        <p class = "text-center">Copyright @ Rebecca Kelsall</p>
+        <p class = "text-center">Contact Info</p>
     </footer>
     
     <script type= "text/javascript" src = "assets/js/overlay-test.js"></script>

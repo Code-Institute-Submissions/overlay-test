@@ -3,28 +3,63 @@
 :root {
     --mainfont: 'Poppins', sans-serif;
     --font-color: rgb(243, 240, 225);    
-    --main-background-color: rgb(19, 19, 43);
+    --main-background-color: #bbbbbb;
+    
 }
-
+* {
+    margin:0px;
+    
+}
 html {
-    background-color: var(--main-background-color);
-    color: var(--font-color); 
     width: 100%;
     text-align: center;
+    background-color: var(--main-background-color);
+    color: 0a043c; 
+    font-family:var(--mainfont);
 }
 
-header {
-    color: var(--font-color);
-    padding: 1rem;
+.logo {
+    color:rgb(243, 240, 225);
+    margin:0;
+    padding: 2rem;
+}
+h3 .logo{
+    padding: 0.5%;
+    font-size: 120%;
+    letter-spacing: 0.1rem;    
 }
 
-.logo {    
-    
+.headings {
+    padding-top:2%;
+    padding-bottom: 2%;
+    font-size: 2rem;
+    margin:0;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+header {    
+    background-color:  rgb(19, 19, 43);
+}
+
+h1 {    
+    font-size:270%;
+    letter-spacing: 0.15rem;
 }
 
 .nav-bar {
-   
-}
+    padding: 0.5%;
+    background-color: #03506f;
+  
+} 
 
 .nav-bar a {
     color: var(--font-color);
@@ -32,15 +67,31 @@ header {
     padding: 1rem;
 }
 
+.about {
+    margin-right:10%;
+    margin-left:10%;
+}
+
 button {
-    margin: 0.2rem; 
+    margin: 0.1rem; 
+    margin-bottom: 0.01rem;
     padding: 0.5rem;
 }
+.symptoms-container{
+    margin-right:20%;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+ul {
+    margin-top: 3%;
+}
+
 
 .test-container {
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 2%;
 }
 
 .testing-area, #overlay-effect{
@@ -57,18 +108,29 @@ button {
 #test-box {
     z-index: -1;
     position: relative; 
-    padding: 10%;    
+    padding: 6%;    
+    font-family: serif;
 }
 
 #testing-area {
-    margin: 1%;
+    margin: 0.3%;
     background-color: white;
     position: relative;
     z-index: -2;
 }
 
+.results-area {
+    /* background-color: red; */
+}
+
+input {
+    display: inline-block;
+}
+#email-btn{
+    
+}
 .start-btn {
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .wordings:hover {
@@ -76,6 +138,30 @@ button {
 }
 
 /* Table */
+
+#results-table {
+    border: 2px solid black;
+    border-radius: 2%;
+    display: inline-block; 
+    border-spacing: 0px;
+    background: black;
+    color: black;
+    
+}
 th, td {
-    padding: 20px;
+    padding: 1rem;
+    background-color: rgb(247, 248, 203);
+    border: 1px solid black;
+    
+}
+
+footer {
+    background-color: rgb(226, 104, 104);
+    margin-top: 2%;
+    
+}
+footer > p {
+    display: inline-block;
+    padding: 1%;
+    width: 31%;
 }

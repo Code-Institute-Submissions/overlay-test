@@ -108,7 +108,7 @@ function findPara () {
 }
 
 function startTimer() {
-    setTimeout(stopTest, 1000)
+    setTimeout(stopTest, 30000)
     
 }
 
