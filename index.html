@@ -14,45 +14,43 @@
 
 </head>
 <body>
-    <head>
+    <header>
+        <div class="logo">
         <h1>The Overlay Test </h1>
         <h3>Testing for Signs of Visual Stress</h3>
+        </div>
         <nav class = "nav-bar">
             <a href ="index.html" class = "nav-bar-item active" >Home</a>
             <a href ="info.html" class = "nav-bar-item">Info</a>
             <a href ="resources.html" class = "nav-bar-item">Resources</a>
         </nav>
-    </head>
+    </header>
     <section>
         <div class = "test-area">
-            <div class="overlay-btns-container" id = "btns">
-                
+            <div class="overlay-btns-container" id = "btns">                
             </div>
-            <div class="test-contatiner">
-                <div id = "overlay-effect"></div>
-                <div class = "testing-area">
+            <div class="test-container">                
+                <div id = "testing-area">
+                    <div id = "overlay-effect">
                     <p id = "test-box">
                         Click the Start button to start the test. - The test will start a 30 second timer, read as many words as you can until you get an alert to stop.  Then click on the last word you read. You can change the colour of the overlays using the buttons at the top. 
-
                     </p>
-
+                    </div>
                 </div>
             </div>    
             <button class="start-btn" onclick="startTest()">Start Test</button>
         </div> 
         <div class="results-area">
             <h3>Results</h3>
-            <form onsubmit = "return sendMail(this)">
-                
-                    <table id="results-table" name = "results"></table>
-                
+            <table id="results-table" name = "results"></table>
+            <form onsubmit = "return sendMail(this)">  
                 <label for ="name">Name</label>
                 <input type = "text" id= "name" name = "name" required>
                 <label for ="email">Email</label>
                 <input type = "email" id= "email" name = "email" required>            
                 <button class = "email-btn" type = "submit">Email My Results</button>    
-            </form>        
-        </div>   
+            </form>
+        </div>
     </section>
     <footer>
         <p>Copyright @ Rebecca Kelsall</p>

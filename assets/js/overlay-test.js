@@ -1,5 +1,7 @@
+
 const buildBtn = document.addEventListener("DOMContentLoaded", buildButtons);
-const testBox = document.getElementById("test-box");
+const testBox = document.getElementById("test-box")
+const container = document.getElementById("testing-area");
 const words = ["is", "look", "come", "see", "play", "cat", "dog", "when", "up", "at", "when", "and", "eat", "the", "my", "for", "to", "you" ];
 const totalWords = 300;
 const resultsTable = document.getElementById("results-table");
@@ -52,7 +54,6 @@ const colors = [
     }
 ];
 
-
 function buildButtons() {
     
     for(i = 0; i < colors.length; i++) {
@@ -75,6 +76,7 @@ function buildButtons() {
 
 function startTest() {
     testBox.innerHTML = "";
+    
  
     findPara()
     startTimer()
@@ -102,25 +104,25 @@ function findPara () {
             }
         }
     testBox.innerHTML = para;
-
     return testBox;    
 }
 
-
 function startTimer() {
     setTimeout(stopTest, 1000)
+    
 }
 
 function stopTest() {
     alert ("TIMES UP! Click the last word you read!");
-    overlay.style.pointerEvents = "none";    
-    
+    testBox.style.zIndex = "2";
+    container.style.zIndex ="0";
 }
 
 function test(data_word_number) {    
     data_word_number++;
     alert( "You read..." + data_word_number + " words with " + overlay.dataset.colorName )
-    overlay.style.pointerEvents = "inherit";
+    testBox.style.zIndex = "-1";
+    container.style.zIndex ="-2";
    
    if (resultsTable.hasChildNodes() == true ) {
         console.log("table already made")
@@ -128,8 +130,7 @@ function test(data_word_number) {
     } else {
         createTable()
         createRow(data_word_number)
-    }
-    
+    }    
 }        
  
 function createTable(){
@@ -142,7 +143,6 @@ function createTable(){
     let heading1 = document.createTextNode('Overlay Colour');
     let heading2 = document.createTextNode('Words Read');
 
-
     head1.appendChild(heading1);
     head2.appendChild(heading2);
     row.appendChild(head1);
@@ -150,8 +150,7 @@ function createTable(){
     tbody.appendChild(row)
     tbody.id = "tbody";
 
-    resultsTable.appendChild(tbody);
-    
+    resultsTable.appendChild(tbody);    
 }
 
 function createRow(data_word_number) {
@@ -173,14 +172,11 @@ function createRow(data_word_number) {
     row.appendChild(td2);
 
     tbody.appendChild(row);
-    
-
 }
 
 function getResult(){
 
 }
-
 
 function resultsAdvice() {
 

@@ -1,5 +1,35 @@
-div {
-    /*padding: 20px;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --mainfont: 'Poppins', sans-serif;
+    --font-color: rgb(243, 240, 225);    
+    --main-background-color: rgb(19, 19, 43);
+}
+
+html {
+    background-color: var(--main-background-color);
+    color: var(--font-color); 
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    color: var(--font-color);
+    padding: 1rem;
+}
+
+.logo {    
+    
+}
+
+.nav-bar {
+   
+}
+
+.nav-bar a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 1rem;
 }
 
 button {
@@ -8,32 +38,44 @@ button {
 }
 
 .test-container {
-    position: relative;
-    padding: 30px;
-}
-
-#overlay-effect {
-         
-    z-index: 1;
-    pointer-events: inherit;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
 }
 
 .testing-area, #overlay-effect{
-    height: 25%;
-    width: 60%;    
-    padding: 30px;
     border: 3px solid black;
-    position: absolute;      
+    color: black;  
+    text-align: center;   
+}
+
+#overlay-effect {
+    
+    position: relative;
+}
+
+#test-box {
+    z-index: -1;
+    position: relative; 
+    padding: 10%;    
+}
+
+#testing-area {
+    margin: 1%;
+    background-color: white;
+    position: relative;
+    z-index: -2;
 }
 
 .start-btn {
-    margin-top:300px;
+    margin-top: 2%;
 }
 
 .wordings:hover {
     background-color: rgb(247, 248, 203);
 }
 
+/* Table */
 th, td {
     padding: 20px;
 }
