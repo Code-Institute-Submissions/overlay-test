@@ -20,11 +20,19 @@ html {
     font-weight: 400;
 }
 
-.logo {
+a { 
+    text-decoration: none;
+}
+
+.logo a {
     color:rgb(243, 240, 225);
+}
+
+.logo {
     margin:0;
     padding: 2rem;
 }
+
 h3 .logo{
     padding: 0.5%;
     font-size: 120%;
@@ -64,8 +72,11 @@ h1 {
 
 .nav-bar a {
     color: var(--font-color);
-    text-decoration: none;
     padding: 1rem;
+}
+
+.nav-bar a:hover {
+    color: var(--pink-color);
 }
 
 .about {
@@ -80,6 +91,10 @@ button {
     border: 1px solid black;
     border-radius: 7%;
     background-color:var(--pink-color);
+}
+
+button:hover {
+    background-color:rgb(235, 148, 148);
 }
 
 .overlay-btns {
