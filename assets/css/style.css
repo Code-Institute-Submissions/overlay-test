@@ -3,19 +3,21 @@
 :root {
     --mainfont: 'Poppins', sans-serif;
     --font-color: rgb(243, 240, 225);    
-    --main-background-color: #bbbbbb;
-    
+    --main-background-color: #f3e5e5;   
+    --pink-color:rgb(226, 104, 104);
 }
+
 * {
-    margin:0px;
-    
+    margin:0px;    
 }
+
 html {
     width: 100%;
     text-align: center;
     background-color: var(--main-background-color);
-    color: 0a043c; 
+    color: #070327; 
     font-family:var(--mainfont);
+    font-weight: 400;
 }
 
 .logo {
@@ -57,8 +59,7 @@ h1 {
 
 .nav-bar {
     padding: 0.5%;
-    background-color: #03506f;
-  
+    background-color: #03506f;  
 } 
 
 .nav-bar a {
@@ -76,18 +77,23 @@ button {
     margin: 0.1rem; 
     margin-bottom: 0.01rem;
     padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 7%;
+    background-color:var(--pink-color);
+}
+
+.overlay-btns {
+    margin: 0.3%;
+    margin-bottom: 0.1%;
+   
 }
 .symptoms-container{
-    margin-right:20%;
-    margin-left: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
+    margin: 3%;
+}    
 
 ul {
     margin-top: 3%;
 }
-
 
 .test-container {
     padding-left: 10%;
@@ -98,11 +104,14 @@ ul {
     border: 3px solid black;
     color: black;  
     text-align: center;   
+    
 }
 
-#overlay-effect {
-    
+#overlay-effect {    
     position: relative;
+}
+.test-area {
+    margin: 1%;
 }
 
 #test-box {
@@ -119,24 +128,21 @@ ul {
     z-index: -2;
 }
 
-.results-area {
-    /* background-color: red; */
-}
-
-input {
-    display: inline-block;
-}
-#email-btn{
-    
-}
-.start-btn {
-    margin-top: 1%;
-}
-
 .wordings:hover {
     background-color: rgb(247, 248, 203);
 }
+#start-btn {
+    background-color:green;
+    margin-top: 0.1%;
 
+}
+.results-area {
+    margin:1rem;
+}
+
+input, label {
+    display: inline-block;
+}
 /* Table */
 
 #results-table {
@@ -144,24 +150,37 @@ input {
     border-radius: 2%;
     display: inline-block; 
     border-spacing: 0px;
-    background: black;
-    color: black;
-    
+    color: black;    
 }
+ 
+
 th, td {
-    padding: 1rem;
+    padding: 2rem;
     background-color: rgb(247, 248, 203);
-    border: 1px solid black;
-    
+    border: 1px solid black;    
 }
 
 footer {
-    background-color: rgb(226, 104, 104);
+    background-color: var(--pink-color);
     margin-top: 2%;
-    
 }
+
 footer > p {
+    padding: 1%;
+    text-align: center;
+}
+
+@media (min-width: 850px) {
+    .symptoms-container{
+    margin-right:20%;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    }
+
+   footer > p {
     display: inline-block;
     padding: 1%;
     width: 31%;
+    }
 }

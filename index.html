@@ -17,7 +17,6 @@
     <header>
         <div class="logo">
         <h1>The Overlay Test </h1>
-        <!-- <h3>Testing for Signs of Visual Stress</h3> -->
         </div>
         <nav class = "nav-bar">
             <a href ="index.html" class = "nav-bar-item active" >Home</a>
@@ -60,18 +59,16 @@
                     </div>
                 </div>
             </div>    
-            <button class="start-btn" onclick="startTest()">Start Test</button>
+            <button id="start-btn">Start Test</button>
         </div> 
         <div class="results-area">
-            <h3 class = "headings">Results</h3>
-            <h3> Total words you read in 30 seconds</h3>
+            <h3 class = "results-area headings">Results</h3>
+            <h4 class= "results-area"> Total words you read in 30 seconds</h4>
             <table id="results-table" name = "results"></table>
-            <form onsubmit = "return sendMail(this)">  
-                <label for ="name">Name</label>
-                <input type = "text" id= "name" name = "name" required>
-                <label for ="email">Email</label>
-                <input type = "email" id= "email" name = "email" required>             
-                <button id = "email-btn" type = "submit">Email My Results</button>    
+            <form onsubmit = "return sendMail(this)" id= "form-area">  
+                <label for ="name">Name: <input type = "text" id= "name" name = "name" required></label>
+                <label for ="email">Email: <input type = "email" id= "email" name = "email" required></label>           
+                <button id = "email-btn" type = "submit" class="results-area">Email My Results</button>    
             </form>
         </div>
     </section>

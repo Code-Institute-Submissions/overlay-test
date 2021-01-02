@@ -1,11 +1,14 @@
 
 const buildBtn = document.addEventListener("DOMContentLoaded", buildButtons);
-const testBox = document.getElementById("test-box")
+let timerbtn = document.getElementById("start-btn"); 
+const testBox = document.getElementById("test-box");
 const container = document.getElementById("testing-area");
 const words = ["is", "look", "come", "see", "play", "cat", "dog", "when", "up", "at", "when", "and", "eat", "the", "my", "for", "to", "you" ];
 const totalWords = 300;
 const resultsTable = document.getElementById("results-table");
 let overlay = document.getElementById("overlay-effect");
+let timer;
+timerbtn.addEventListener("click", startTest);
 
 const colors = [
      {
@@ -76,10 +79,36 @@ function buildButtons() {
 
 function startTest() {
     testBox.innerHTML = "";
-    
- 
+    timerbtn.removeEventListener("click", startTest);
+    timerbtn.addEventListener("click", stopTest);
+    timerbtn.style.backgroundColor = "rgb(226, 104, 104)";
+    timerbtn.innerHTML= "Stop Testing"; 
     findPara()
-    startTimer()
+    startTimer()   
+}
+
+function startTimer() {
+    timer = setTimeout(endTest, 30000);    
+    
+}
+
+function stopTest (){
+    clearTimeout(timer);
+    timerbtn.removeEventListener("click", stopTest);
+    timerbtn.addEventListener("click", startTest);
+    timerbtn.innerHTML= "Start Test";
+    timerbtn.style.backgroundColor = "green"
+    
+}
+
+function endTest() {
+    alert ("TIMES UP! Click the last word you read!");
+    testBox.style.zIndex = "2";
+    container.style.zIndex ="0";
+    timerbtn.removeEventListener("click", stopTest);
+    timerbtn.addEventListener("click", startTest);
+    timerbtn.innerHTML= "Start Test";
+    timerbtn.style.backgroundColor = "green";
 }
 
 function findWord() {
@@ -105,17 +134,6 @@ function findPara () {
         }
     testBox.innerHTML = para;
     return testBox;    
-}
-
-function startTimer() {
-    setTimeout(stopTest, 30000)
-    
-}
-
-function stopTest() {
-    alert ("TIMES UP! Click the last word you read!");
-    testBox.style.zIndex = "2";
-    container.style.zIndex ="0";
 }
 
 function test(data_word_number) {    
