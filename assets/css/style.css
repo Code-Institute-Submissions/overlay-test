@@ -94,13 +94,12 @@ button {
 }
 
 button:hover {
-    background-color:rgb(235, 148, 148);
+    opacity: 0.8;
 }
 
 .overlay-btns {
     margin: 0.3%;
     margin-bottom: 0.1%;
-   
 }
 .symptoms-container{
     margin: 3%;
@@ -149,8 +148,8 @@ ul {
 #start-btn {
     background-color:green;
     margin-top: 0.1%;
-
 }
+
 .results-area {
     margin:1rem;
 }
