@@ -21,6 +21,9 @@ html {
     font-family:var(--mainfont);
     font-weight: 400;
 }
+p {
+    margin: 0.5%;
+}
 
 a { 
     text-decoration: none;
@@ -46,6 +49,11 @@ h3 .logo{
     padding-bottom: 2%;
     font-size: 2rem;
     margin:0;
+}
+
+.sub-headings {
+    padding: 1%;
+    font-size:1.3rem;
 }
 
 .text-left {
@@ -183,26 +191,35 @@ footer {
 }
 
 footer > p {
-    padding: 1%;
     text-align: center;
 }
 
 embed {
-    width:70%;
-    height: 23rem;
+    width:95%;
+    height: 20rem;
 }
 
+.container {
+    margin: 3%;
+}
+
+
 @media (min-width: 850px) {
+    
+    embed {
+        width:75%;
+        height: 20rem;
+    }
     .symptoms-container{
-    margin-right:20%;
-    margin-left: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+        margin-right:20%;
+        margin-left: 20%;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
    footer > p {
-    display: inline-block;
-    padding: 1%;
-    width: 31%;
+        display: inline-block;
+        width: 31%;
+        padding: 0.5%;
     }
 }
