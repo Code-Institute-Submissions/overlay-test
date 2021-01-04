@@ -187,6 +187,11 @@ footer > p {
     text-align: center;
 }
 
+embed {
+    width:70%;
+    height: 23rem;
+}
+
 @media (min-width: 850px) {
     .symptoms-container{
     margin-right:20%;
