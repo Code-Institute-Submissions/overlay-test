@@ -9,6 +9,7 @@ const resultsTable = document.getElementById("results-table");
 let overlay = document.getElementById("overlay-effect");
 let timer;
 timerbtn.addEventListener("click", startTest);
+const countBox = document.getElementById('count-box')
 
 const colors = [
      {
@@ -84,21 +85,37 @@ function startTest() {
     timerbtn.style.backgroundColor = "var(--blue-background)";
     timerbtn.style.color= " var(--sub-font-color)";
     timerbtn.innerHTML= "Stop Testing"; 
-    findPara()
-    startTimer()   
+    countBox.innerHTML = "GO!";
+    startTimer();
+    generateText();
+    
 }
 
 function startTimer() {
-    timer = setTimeout(endTest, 30000);        
+    let countdown = 3;
+    timer = setInterval(viewTime, 1000);
+    
+    function viewTime() {
+      if (countdown == -1) {
+        clearTimeout(timer);
+        countBox.innerHTML = 'Times up! Click the last word you read'
+        countBox.classList.add("stop-test");
+        endTest();
+      } else {
+        countBox.innerHTML = countdown + ' s';
+        countdown--;
+      }
+    }            
 }
 
 function stopTest (){
     clearTimeout(timer);
+    countBox.classList.remove("stop-test");
+    countBox.innerHTML = 'Click start to begin the test';
     endChanges();    
 }
 
 function endTest() {
-    alert ("TIMES UP! Click the last word you read!");
     testBox.style.zIndex = "2";
     container.style.zIndex ="0";
     endChanges();
@@ -114,36 +131,43 @@ function endChanges(){
 
 function findWord() {
     let word = words[Math.floor(Math.random()*words.length)]
-    word = (word + " ");
+    // word = word + ""
     return word;
 } 
 
-function findPara () {
-    let para = "";
+function generateText () {
+    let paragraph = "";
     
     for(let i = 0; i < totalWords; i++) {
         let thisWord= findWord();    
-        let str = `<span class = "wordings" data-word-number=${i} onclick = "test(this.getAttribute('data-word-number'))">${thisWord}</span>`;
-        let findEndStr =  para.slice(-12);
-        let missWord = findEndStr.includes(thisWord);
+        let str = `
+            <span class="wordings" data-word-number=${i} onclick="testResult(this.getAttribute('data-word-number'))">
+                ${thisWord} 
+            </span>
+        `;
+        let findEndStr =  paragraph.slice(-45);
+        let skipWord = findEndStr.includes(thisWord);
         
-        if (missWord == true ) {
+        if (skipWord) {
                 continue;        
             } else {
-                para += str;        
+                paragraph += str;        
             }
         }
-    testBox.innerHTML = para;
+    testBox.innerHTML = paragraph;
     return testBox;    
+
 }
 
-function test(data_word_number) {    
+function testResult(data_word_number) {    
     data_word_number++;
     alert( "You read..." + data_word_number + " words with " + overlay.dataset.colorName )
     testBox.style.zIndex = "-1";
     container.style.zIndex ="-2";
+    countBox.innerHTML = "Click start to begin the test"
+    countBox.classList.remove("stop-test");
    
-   if (resultsTable.hasChildNodes() == true ) {
+   if (resultsTable.hasChildNodes()) {
         console.log("table already made")
         createRow(data_word_number)
     } else {
@@ -154,7 +178,8 @@ function test(data_word_number) {
  
 function createTable(){
     let tbody = document.createElement('tbody')    
-    let row = document.createElement('tr');   
+    let row = document.createElement('tr');  
+    resultsTable.classList.add('table-color');
 
     let head1 = document.createElement('th');
     let head2 = document.createElement('th');

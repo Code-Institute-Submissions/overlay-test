@@ -138,11 +138,26 @@ ul {
 .test-area {
     margin: 1%;
 }
+#count-box {
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+}
+
+.stop-test {
+    margin-top: 2%;
+    background-color: var(--blue-background);
+    color: var(--sub-font-color);
+    opacity: 0.7;
+    border-radius: 5%;
+    width: 40%;
+    margin: auto;
+}
 
 #test-box {
     z-index: -1;
     position: relative; 
-    padding: 6%;    
+    padding: 6%;   
+    padding-top: 0%; 
     font-family: serif;
 }
 
@@ -170,7 +185,7 @@ input, label {
 }
 /* Table */
 
-#results-table {
+.table-color {
     border: 2px solid black;
     border-radius: 2%;
     display: inline-block; 
