@@ -10,6 +10,7 @@ let overlay = document.getElementById("overlay-effect");
 let timer;
 timerbtn.addEventListener("click", startTest);
 const countBox = document.getElementById('count-box')
+const resultsArea = document.getElementById("results")
 
 const colors = [
      {
@@ -159,11 +160,9 @@ function generateText () {
 
 function testResult(data_word_number) {    
     data_word_number++;
-    alert( "You read..." + data_word_number + " words with " + overlay.dataset.colorName )
+    countBox.innerHTML = 'You read...' + data_word_number + ' words with ' + overlay.dataset.colorName + '!'
     testBox.style.zIndex = "-1";
     container.style.zIndex ="-2";
-    countBox.innerHTML = "Click start to begin the test"
-    countBox.classList.remove("stop-test");
    
    if (resultsTable.hasChildNodes()) {
         console.log("table already made")
@@ -171,8 +170,18 @@ function testResult(data_word_number) {
     } else {
         createTable()
         createRow(data_word_number)
-    }    
+    };
+    
+    setTimeout(resultsAlert, 1000);
 }        
+
+function resultsAlert(){
+    alert( 'Your results have been added to a table below this test') 
+    countBox.innerHTML = "Click start to begin the test"
+    countBox.classList.remove("stop-test");   
+    results.style.display = "block";
+    
+}
  
 function createTable(){
     let tbody = document.createElement('tbody')    
