@@ -81,34 +81,35 @@ function startTest() {
     testBox.innerHTML = "";
     timerbtn.removeEventListener("click", startTest);
     timerbtn.addEventListener("click", stopTest);
-    timerbtn.style.backgroundColor = "rgb(226, 104, 104)";
+    timerbtn.style.backgroundColor = "var(--blue-background)";
+    timerbtn.style.color= " var(--sub-font-color)";
     timerbtn.innerHTML= "Stop Testing"; 
     findPara()
     startTimer()   
 }
 
 function startTimer() {
-    timer = setTimeout(endTest, 30000);    
-    
+    timer = setTimeout(endTest, 30000);        
 }
 
 function stopTest (){
     clearTimeout(timer);
-    timerbtn.removeEventListener("click", stopTest);
-    timerbtn.addEventListener("click", startTest);
-    timerbtn.innerHTML= "Start Test";
-    timerbtn.style.backgroundColor = "green"
-    
+    endChanges();    
 }
 
 function endTest() {
     alert ("TIMES UP! Click the last word you read!");
     testBox.style.zIndex = "2";
     container.style.zIndex ="0";
+    endChanges();
+}
+
+function endChanges(){
     timerbtn.removeEventListener("click", stopTest);
     timerbtn.addEventListener("click", startTest);
     timerbtn.innerHTML= "Start Test";
-    timerbtn.style.backgroundColor = "green";
+    timerbtn.style.backgroundColor = "var(--pink-color)";
+    timerbtn.style.color= " var(--font-color)";
 }
 
 function findWord() {
