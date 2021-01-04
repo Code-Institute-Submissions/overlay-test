@@ -27,6 +27,7 @@ p {
 
 a { 
     text-decoration: none;
+    color: var(--pink-color);
 }
 
 .logo a {
@@ -58,13 +59,7 @@ h3 .logo{
 
 .text-left {
     text-align: left;
-}
-.text-center {
-    text-align: center;
-}
-.text-right {
-    text-align: right;
-}
+}    
 
 header {    
     background-color:  rgb(19, 19, 43);
@@ -81,6 +76,10 @@ h1 {
     background-color: var(--blue-background);  
 } 
 
+.nav-bar a.active  { 
+    color: var(--pink-color);
+}
+
 .nav-bar a {
     color: var(--sub-font-color);
     padding: 1rem;
@@ -90,18 +89,20 @@ h1 {
     color: var(--pink-color);
 }
 
+
 .about {
     margin-right:10%;
     margin-left:10%;
 }
 
 button {
-    margin: 0.1rem; 
+    margin: 1.5rem; 
     margin-bottom: 0.01rem;
     padding: 0.5rem;
-    border: 1px solid black;
+    border: 1px inset pink;
     border-radius: 7%;
     background-color:var(--pink-color);
+    font-family: var(--mainfont);
 }
 
 button:hover {
@@ -135,7 +136,7 @@ ul {
 #overlay-effect {    
     position: relative;
 }
-.test-area {
+#test-area {
     margin: 1%;
 }
 #count-box {
@@ -180,10 +181,6 @@ ul {
 .wordings:hover {
     background-color: rgb(247, 248, 203);
 }
-/* #start-btn {
-    background-color: var(--pink-color);
-    margin-top: 0.1%;
-} */
 
 #results {
     display: none;
@@ -220,7 +217,7 @@ th, td {
 footer {
     background-color: var(--blue-background);
     color: var(--sub-font-color);
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 footer > p {
