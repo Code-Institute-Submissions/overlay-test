@@ -131,7 +131,6 @@ function endChanges(){
 
 function findWord() {
     let word = words[Math.floor(Math.random()*words.length)]
-    // word = word + ""
     return word;
 } 
 
@@ -155,8 +154,7 @@ function generateText () {
             }
         }
     testBox.innerHTML = paragraph;
-    return testBox;    
-
+    return testBox;
 }
 
 function testResult(data_word_number) {    
