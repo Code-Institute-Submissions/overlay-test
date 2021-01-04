@@ -83,8 +83,8 @@ function startTest() {
     testBox.innerHTML = "";
     timerbtn.removeEventListener("click", startTest);
     timerbtn.addEventListener("click", stopTest);
-    timerbtn.style.backgroundColor = "var(--blue-background)";
-    timerbtn.style.color= " var(--sub-font-color)";
+    timerbtn.classList.remove("start-test");
+    timerbtn.classList.add("end-test");
     timerbtn.innerHTML= "Stop Testing"; 
     countBox.innerHTML = "GO!";
     startTimer();
@@ -93,7 +93,7 @@ function startTest() {
 }
 
 function startTimer() {
-    let countdown = 3;
+    let countdown = 30;
     timer = setInterval(viewTime, 1000);
     
     function viewTime() {
@@ -113,6 +113,9 @@ function stopTest (){
     clearTimeout(timer);
     countBox.classList.remove("stop-test");
     countBox.innerHTML = 'Click start to begin the test';
+    timerbtn.classList.remove("end-test")
+    timerbtn.classList.add("start-test")
+    timerbtn.innerHTML= "Start Test";
     endChanges();    
 }
 
@@ -125,11 +128,8 @@ function endTest() {
 function endChanges(){
     timerbtn.removeEventListener("click", stopTest);
     timerbtn.addEventListener("click", startTest);
-    timerbtn.innerHTML= "Start Test";
-    timerbtn.style.backgroundColor = "var(--pink-color)";
-    timerbtn.style.color= " var(--font-color)";
+   
 }
-
 function findWord() {
     let word = words[Math.floor(Math.random()*words.length)]
     return word;
@@ -161,6 +161,9 @@ function generateText () {
 function testResult(data_word_number) {    
     data_word_number++;
     countBox.innerHTML = 'You read...' + data_word_number + ' words with ' + overlay.dataset.colorName + '!'
+    timerbtn.classList.remove("end-test");
+    timerbtn.classList.add("start-test");
+    timerbtn.innerHTML= "Start Test";
     testBox.style.zIndex = "-1";
     container.style.zIndex ="-2";
    
