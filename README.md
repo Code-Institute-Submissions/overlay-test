@@ -1,4 +1,4 @@
-# Plant Factory 
+# Overlay Test
 
 ![Main Mockup]
 
@@ -140,7 +140,7 @@
 
  
 
-###### Form 
+###### Email
 
 ### Future Features 
 
@@ -185,6 +185,8 @@ Testing
 [CSS Validator](https://validator.w3.org/)
 
 ### Usability Testing
+
+issue with alert blocking - changed to be innerhtml/countdown
 
 [Wave](https://wave.webaim.org/) 
     
