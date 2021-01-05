@@ -36,8 +36,8 @@ a:hover {
 }
 
 .headings {
-    padding-top:2%;
-    padding-bottom: 1.25%;
+    padding-top:1.25%;
+    padding-bottom: 0.75%;
     font-size: 2rem;
     margin:0;
 }
@@ -66,7 +66,9 @@ button:hover {
 }
 
 .container {
-    margin: 3%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
 
 /* Header */
@@ -104,6 +106,10 @@ h3 .logo{
     color: var(--pink-color);
 }
 
+.nav-bar a.active:hover {
+    color:  rgb(155, 43, 62);
+
+}
 .nav-bar a {
     color: var(--sub-font-color);
     padding: 1rem;
@@ -115,10 +121,6 @@ h3 .logo{
 
 /* Home Page */
 /* About area */
-.about {
-    margin-right:10%;
-    margin-left:10%;
-}
 
 .overlay-btns {
     margin: 0.3%;
@@ -132,8 +134,9 @@ li {
     padding: 0.15rem;
 }
 
-ul .about {
+ul#symptoms-list {
     margin-top: 3%;
+    list-style: square;
 }
 
 /*Testing Area - incluldes classes to be added and removed in overlay-test.js*/
@@ -246,7 +249,6 @@ input, label {
     display: inline-block;
 }
 
-
 table {
     margin: 1.5rem;
     border: 1px solid black;
@@ -265,13 +267,16 @@ th, td {
     color: black;  
 }
 
-#advise {
-    display:none;
-}
-
 .advise-col {
     margin: 1%;
     font-size: 1rem;
+}
+
+/*  Resources page */
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
 }
 
 /* Footer */

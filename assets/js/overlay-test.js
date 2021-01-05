@@ -4,7 +4,6 @@ const resultsTable = document.getElementById('results-table');
 const overlay = document.getElementById('overlay-effect');
 const timerBox = document.getElementById('count-box');
 const resultsArea = document.getElementById('results');
-const adviseArea = document.getElementById('advise');
 const testArea = document.getElementById('testing-area');
 const instructions = document.getElementById('instructions');
 const buttonDiv = document.getElementById('btns');  
@@ -301,8 +300,7 @@ function resultsAlert(){
     alert( 'Your results have been added to a table below this test') 
     timerBox.innerHTML = 'Click start to begin the test'
     timerBox.classList.remove('stop-test');   
-    resultsArea.style.display = 'block';
-    adviseArea.style.display="block";    
+    resultsArea.style.display = 'block';   
 }
  
 /** Creates a table
@@ -358,6 +356,9 @@ function createRow(data_word_number) {
     tbody.appendChild(row);
 }
 
+/** This calculates whether the user has a change in reading % 
+ * It takes the scores to work out the difference 
+ * Then logs the results for the user */
 function calculator() {
     let topScore = parseInt(document.getElementById("top-score").value);
     let baseline = parseInt(document.getElementById("baseline").value);    
@@ -368,5 +369,11 @@ function calculator() {
     increase = increase/baseline;
     percentage = increase * 100;  
     percentage =  Math.round(percentage)
+    console.log(percentage)
+    
+    if (isNaN(percentage)){
+        speedincrease.innerHTML = "No results entered please enter numbers into both boxes"
+    } else {
     speedincrease.innerHTML = "Your wordspeed changed by " + percentage + "%"
+    }
 }
