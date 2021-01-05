@@ -1,4 +1,14 @@
-
+/**This function is called when the user submits the email my results form
+ * WordCount and OverlayColour are returned as arrays
+ * The resultsStr is genereated using a loop to iterate through the array
+ * The for loop builds a string and update the resultStr
+ * The user gets all the results emailed to them instead of one at a time
+ * The resultStr is then set as a parameter for the email
+ * email.send uses the service id and template id correspondonding to emailJS
+ * name and email parameters are called from the form
+ * The email is sent to the user using emailsJS 
+ * Then the user recieves an alert to say it has been sent.   
+ */
 
 function sendMail(resultsForm) {
     let wordCount = document.getElementsByClassName('word-count');

@@ -193,7 +193,7 @@ ul {
     color:var(--sub-font-color);
 }
 
-.wordings:hover {
+.words:hover {
     background-color: rgb(247, 248, 203);
 }
 
