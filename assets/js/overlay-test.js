@@ -1,17 +1,41 @@
-
-const buildBtn = document.addEventListener("DOMContentLoaded", buildButtons);
-let timerbtn = document.getElementById("start-btn"); 
-const testBox = document.getElementById("test-box");
-const container = document.getElementById("testing-area");
-const words = ["is", "look", "come", "see", "play", "cat", "dog", "when", "up", "at", "when", "and", "eat", "the", "my", "for", "to", "you" ];
-const totalWords = 300;
+/*Sets names for variables that will be used mulitple times*/
+const textBox = document.getElementById("text-box");
 const resultsTable = document.getElementById("results-table");
-let overlay = document.getElementById("overlay-effect");
-let timer;
-timerbtn.addEventListener("click", startTest);
-const countBox = document.getElementById('count-box')
-const resultsArea = document.getElementById("results")
+const overlay = document.getElementById("overlay-effect");
+const timerBox = document.getElementById('count-box');
+const resultsArea = document.getElementById("results");
+const testArea = document.getElementById("testing-area");
 
+/* Global variable to allow timer to be stop and started*/
+let timer;
+let countdown;
+
+/* Total words wanted for test */
+const totalWords = 300;
+
+/* Words to be used for the random generated paragraph*/
+const words = [
+    "is", 
+    "look", 
+    "come", 
+    "see", 
+    "play", 
+    "cat", 
+    "dog", 
+    "when", 
+    "up", 
+    "at", 
+    "when", 
+    "and", 
+    "eat", 
+    "the", 
+    "my", 
+    "for", 
+    "to", 
+    "you" 
+];
+
+/*Colours to be used for overlays and names*/
 const colors = [
      {
        'name': 'No Overlay',
@@ -59,75 +83,111 @@ const colors = [
     }
 ];
 
-function buildButtons() {
+/** 
+ * On page loaded event listener is added to the page and
+ * buttons of overlays colours are automatically genereated. 
+ * startBtn is also given event listener to start test. 
+ */
+const buildBtn = document.addEventListener("DOMContentLoaded", buildButtons);
+const startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", startTest); 
+
+/**
+ * BuildButtons function builds the coloured overlay buttons
+ * It takes the colors array and loops through
+ * Assigning the innerHTML name and an eventlistener
+ * The event listener when clicked changes the color value of the overlay 
+ * The event listener also gives the overlay a dataset of the color name used. 
+ * The button is then appended within the button div.
+ */
+
+function buildButtons() {  
     
-    for(i = 0; i < colors.length; i++) {
+    for( let color of colors) {
         let button = document.createElement("button");
-        let addColor = colors[i].colorValue; 
-        let color= colors[i].name;
         overlay.dataset.colorName = "No Overlay";
         
-        button.innerHTML = colors[i].name;
+        button.innerHTML = color.name;
         button.className = "overlay-btns";
         button.addEventListener("click", function() {            
-            overlay.style.backgroundColor = addColor;         
-            overlay.dataset.colorName = color;
+            overlay.style.backgroundColor = color.colorValue;         
+            overlay.dataset.colorName = color.name;
         });
 
         let buttonDiv = document.getElementById("btns");
         buttonDiv.appendChild(button);
     }
-}
+};
 
+/** Start test function starts the test by calling on other functions
+ * The innerHTML of textBox is given a value of an empty string 
+ * The generateText function is called
+ * The startTimer function is called
+ * The event listeners are replaced so the start button becomes a stop button
+ * The innerHTML and classes for the start button are changed 
+ * timerBox is given innerHTML of GO! before the timer starts
+ */
 function startTest() {
-    testBox.innerHTML = "";
-    timerbtn.removeEventListener("click", startTest);
-    timerbtn.addEventListener("click", stopTest);
-    timerbtn.classList.remove("start-test");
-    timerbtn.classList.add("end-test");
-    timerbtn.innerHTML= "Stop Testing"; 
-    countBox.innerHTML = "GO!";
+    textBox.innerHTML = "";
+    startBtn.removeEventListener("click", startTest);
+    startBtn.addEventListener("click", stopTest);
+    startBtn.classList.remove("start-test");
+    startBtn.classList.add("end-test");
+    startBtn.innerHTML= "Stop Testing"; 
+    timerBox.innerHTML = "GO!";
     startTimer();
     generateText();
     
 }
 
-function startTimer() {
-    let countdown = 30;
+/** Start timer sets the  interval of 1 second
+ * Calls the viewtime function. 
+ */
+function startTimer() {    
     timer = setInterval(viewTime, 1000);
-    
-    function viewTime() {
-      if (countdown == -1) {
-        clearTimeout(timer);
-        countBox.innerHTML = 'Times up! Click the last word you read'
-        countBox.classList.add("stop-test");
-        endTest();
-      } else {
-        countBox.innerHTML = countdown + ' s';
-        countdown--;
-      }
-    }            
+    countdown = 30;             
 }
 
+/**creates an if statement to find out if countdown is complete
+ * if it has been 30s the timer is cleared
+ * The timerBox then prompts the user to click on the last word read
+ * timerBox is given new class 
+ * The end of test function is called
+ * Else if the timer is not finished the countDown prints the seconds left
+ * The countdown takes off 1 second *  
+ */
+function viewTime() {
+      if (countdown == -1) {
+        clearTimeout(timer);
+        timerBox.innerHTML = 'Times up! Click the last word you read'
+        timerBox.classList.add("stop-test");
+        endTest();
+      } else {
+        timerBox.innerHTML = countdown + ' s';
+        countdown--;
+      }
+    }     
+
+function endTest() {
+    textBox.classList.remove("text-box-default")
+    textBox.classList.add("text-box-live")
+    testArea.classList.remove("test-area-default")
+    testArea.classList.add("test-area-live")
+    endChanges();
+}    
 function stopTest (){
     clearTimeout(timer);
-    countBox.classList.remove("stop-test");
-    countBox.innerHTML = 'Click start to begin the test';
-    timerbtn.classList.remove("end-test")
-    timerbtn.classList.add("start-test")
-    timerbtn.innerHTML= "Start Test";
+    timerBox.classList.remove("stop-test");
+    timerBox.innerHTML = 'Click start to begin the test';
+    startBtn.classList.remove("end-test")
+    startBtn.classList.add("start-test")
+    startBtn.innerHTML= "Start Test";
     endChanges();    
 }
 
-function endTest() {
-    testBox.style.zIndex = "2";
-    container.style.zIndex ="0";
-    endChanges();
-}
-
 function endChanges(){
-    timerbtn.removeEventListener("click", stopTest);
-    timerbtn.addEventListener("click", startTest);
+    startBtn.removeEventListener("click", stopTest);
+    startBtn.addEventListener("click", startTest);
    
 }
 function findWord() {
@@ -141,7 +201,8 @@ function generateText () {
     for(let i = 0; i < totalWords; i++) {
         let thisWord= findWord();    
         let str = `
-            <span class="wordings" data-word-number=${i} onclick="testResult(this.getAttribute('data-word-number'))">
+            <span class="wordings" data-word-number=${i}
+            onclick="testResult(this.getAttribute('data-word-number'))">
                 ${thisWord} 
             </span>
         `;
@@ -154,18 +215,24 @@ function generateText () {
                 paragraph += str;        
             }
         }
-    testBox.innerHTML = paragraph;
-    return testBox;
+    textBox.innerHTML = paragraph;
+    return textBox;
 }
 
 function testResult(data_word_number) {    
     data_word_number++;
-    countBox.innerHTML = 'You read...' + data_word_number + ' words with ' + overlay.dataset.colorName + '!'
-    timerbtn.classList.remove("end-test");
-    timerbtn.classList.add("start-test");
-    timerbtn.innerHTML= "Start Test";
-    testBox.style.zIndex = "-1";
-    container.style.zIndex ="-2";
+    timerBox.innerHTML = 'You read...' + 
+                        data_word_number +
+                        ' words with ' +
+                        overlay.dataset.colorName +
+                        '!'
+    startBtn.classList.remove("end-test");
+    startBtn.classList.add("start-test");
+    startBtn.innerHTML= "Start Test";
+    textBox.classList.remove("text-box-live")
+    textBox.classList.add("text-box-default")
+    testArea.classList.remove("test-area-live")
+    testArea.classList.add("test-area-default")
    
    if (resultsTable.hasChildNodes()) {
         console.log("table already made")
@@ -180,8 +247,8 @@ function testResult(data_word_number) {
 
 function resultsAlert(){
     alert( 'Your results have been added to a table below this test') 
-    countBox.innerHTML = "Click start to begin the test"
-    countBox.classList.remove("stop-test");   
+    timerBox.innerHTML = "Click start to begin the test"
+    timerBox.classList.remove("stop-test");   
     results.style.display = "block";
     
 }
@@ -228,10 +295,3 @@ function createRow(data_word_number) {
     tbody.appendChild(row);
 }
 
-function getResult(){
-
-}
-
-function resultsAdvice() {
-
-}

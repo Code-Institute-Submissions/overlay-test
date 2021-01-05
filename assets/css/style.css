@@ -121,6 +121,10 @@ ul {
     margin-top: 3%;
 }
 
+#test-area {
+    margin: 1%;
+}
+
 .test-container {
     padding-left: 1%;
     padding-right: 1%;
@@ -129,16 +133,13 @@ ul {
 .testing-area, #overlay-effect{
     border: 3px solid black;
     color: black;  
-    text-align: center;   
-    
+    text-align: center;    
 }
 
 #overlay-effect {    
     position: relative;
 }
-#test-area {
-    margin: 1%;
-}
+
 #count-box {
     margin-top: 1.5%;
     margin-bottom: 1%;
@@ -154,13 +155,34 @@ ul {
     margin: auto;
 }
 
-#test-box {
-    z-index: -1;
+#testing-area {
+    margin: 0.3%;
+    background-color: white;
+    position: relative;    
+}
+
+.test-area-default {
+    z-index: -2;
+}
+
+.test-area-live {
+    z-index: 0;
+}
+
+#text-box {
     position: relative; 
     padding: 6%;   
     padding-top: 0%; 
     font-family: serif;
 }
+.text-box-default {
+    z-index: -1
+}
+
+.text-box-live {
+    z-index: 2;
+}
+
 .start-test {
     background-color:var(--pink-color);
     color:var(--font-color);
@@ -169,13 +191,6 @@ ul {
 .end-test {    
     background-color:var(--blue-background);
     color:var(--sub-font-color);
-}
-
-#testing-area {
-    margin: 0.3%;
-    background-color: white;
-    position: relative;
-    z-index: -2;
 }
 
 .wordings:hover {
@@ -203,8 +218,7 @@ table {
     display: inline-block; 
     border-spacing: 0px;
     color: black;    
-}
- 
+} 
 
 th, td {
     padding: 1rem;
@@ -258,3 +272,4 @@ embed {
         padding: 0.5%;
     }
 }
+
