@@ -4,7 +4,10 @@ const resultsTable = document.getElementById('results-table');
 const overlay = document.getElementById('overlay-effect');
 const timerBox = document.getElementById('count-box');
 const resultsArea = document.getElementById('results');
+const adviseArea = document.getElementById('advise');
 const testArea = document.getElementById('testing-area');
+const instructions = document.getElementById('instructions');
+const buttonDiv = document.getElementById('btns');  
 
 /* Global variables to allow timer to be stop and started*/
 let timer;
@@ -83,10 +86,13 @@ const colors = [
 /** On page loaded event listener is added to the page and
  * buttons of overlays colours are automatically genereated. 
  * startBtn is also given event listener to start test. 
+ * submitBtn is also given an event listener for calculator
  */
 const buildBtn = document.addEventListener('DOMContentLoaded', buildButtons);
 const startBtn = document.getElementById('start-btn');
+const submitBtn = document.getElementById("calculate-btn");
 startBtn.addEventListener('click', startTest); 
+submitBtn.addEventListener("click", calculator)
 
 /** BuildButtons function builds the coloured overlay buttons
  * It takes the colors array and loops through
@@ -94,8 +100,9 @@ startBtn.addEventListener('click', startTest);
  * The event listener when clicked changes the color value of the overlay 
  * The event listener also gives the overlay a dataset of the color name used. 
  * The button is then appended within the button div.
+ * Calls the instruction button function 
  */
-function buildButtons() {  
+function buildButtons() {
     
     for( let color of colors) {
         let button = document.createElement('button');
@@ -106,12 +113,25 @@ function buildButtons() {
         button.addEventListener('click', function() {            
             overlay.style.backgroundColor = color.colorValue;         
             overlay.dataset.colorName = color.name;
-        });
-
-        let buttonDiv = document.getElementById('btns');
+        });        
         buttonDiv.appendChild(button);
     }
+    instructionBtn()
 };
+
+function instructionBtn() {
+    let instructionBtn = document.createElement('button');
+    instructionBtn.innerHTML = 'See Instructions';
+    instructionBtn.classList.add('instruction-btn')
+    instructionBtn.classList.add('overlay-btns');
+    
+    instructionBtn.addEventListener('click', function() {
+        instructions.classList.add('show-instructions')
+        textBox.innerHTML = '';
+        stopTest();    
+    })
+        buttonDiv.appendChild(instructionBtn)
+}
 
 /** Start test function starts the test by calling on other functions
  * The innerHTML of textBox is given a value of an empty string 
@@ -122,6 +142,7 @@ function buildButtons() {
  * timerBox is given innerHTML of GO! before the timer starts
  */
 function startTest() {
+    instructions.classList.remove("show-instructions")
     textBox.innerHTML = '';
     startBtn.removeEventListener('click', startTest);
     startBtn.addEventListener('click', stopTest);
@@ -269,7 +290,7 @@ function testResult(data_word_number) {
         createRow(data_word_number)
     };
     
-    setTimeout(resultsAlert, 1000);
+    setTimeout(resultsAlert, 500);
 }
 
 /** This function will give the user an alert 
@@ -280,7 +301,8 @@ function resultsAlert(){
     alert( 'Your results have been added to a table below this test') 
     timerBox.innerHTML = 'Click start to begin the test'
     timerBox.classList.remove('stop-test');   
-    results.style.display = 'block';    
+    resultsArea.style.display = 'block';
+    adviseArea.style.display="block";    
 }
  
 /** Creates a table
@@ -292,7 +314,6 @@ function resultsAlert(){
 function createTable(){
     let tbody = document.createElement('tbody')    
     let row = document.createElement('tr');  
-    resultsTable.classList.add('table-color');
 
     let head1 = document.createElement('th');
     let head2 = document.createElement('th');
@@ -337,3 +358,15 @@ function createRow(data_word_number) {
     tbody.appendChild(row);
 }
 
+function calculator() {
+    let topScore = parseInt(document.getElementById("top-score").value);
+    let baseline = parseInt(document.getElementById("baseline").value);    
+    let speedincrease = document.getElementById("percentage-result");
+    speedincrease.innerHTML = "";
+
+    let increase = (topScore - baseline);
+    increase = increase/baseline;
+    percentage = increase * 100;  
+    percentage =  Math.round(percentage)
+    speedincrease.innerHTML = "Your wordspeed changed by " + percentage + "%"
+}

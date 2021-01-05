@@ -24,14 +24,10 @@
         </nav>
     </header>
     <section>
-        <div class="images">
-            <img href= "assets/images/visual-stress.png">
-        </div>
         <div class="about">
             <h2 class = "headings">About the Overlay Test</h2>
-            <p> 
-                This Overlay Test is designed to aid in the detection of signs of Visual stress, the test below will help you to find out if a coloured overlay may increase your reading speed.  This tool is not a diagnosis for Visual Stress but may help identify if an overlay may be useful. If you or you child suffers from reading difficulties, eyestrain or headaches you may want to find out whether or not you have a visual stress issue.  We advise that you have your eyes checked regularly by an Optometrist.  Please check out our advise page for more information on Visual Stress and where to get additional support, advise and materials.
-            </p>
+            <p> This Overlay Test is designed to aid in the detection of signs of Visual stress, the test below will help you to find out if a coloured overlay may increase your reading speed.  This tool is not a diagnosis for Visual Stress but may help identify if an overlay may be useful. If you or you child suffers from reading difficulties, eyestrain or headaches you may want to find out whether or not you have a visual stress issue.  We advise that you have your eyes checked regularly by an Optometrist.  Please check out our resources page <a href = "resources.html">here</a> for more information on Visual Stress and where to get additional support, advise and materials.
+            </p> 
             <a href = "#test-area"><button>Jump to Test</button></a>
             <div class="symptoms-container">
                 <h3 class = "headings">What are signs of Visual Stress</h3>
@@ -59,10 +55,21 @@
                         <p id = "count-box">
                             Click start to begin the test
                         </p>  
+                        </div>
+                        <div id = "instructions" class = "hide-instructions show-instructions text-left">
+                            <ul>
+                                <li>First run the test without a coloured overlay</li>
+                                <li>When you click the Start button the test will begin a 30s timer </li>
+                                <li>Read as many words <b>out loud</b> as you can until you get an alert to stop.</li>
+                                <li>You will then be asked to click on the last word you read.</li>
+                                <li>Repeat the test again without an overlay</li>
+                                <li> After you have done it a couple of times start to try with different colour overlays, these can be changed using the buttons above. </li>
+                                <li>To get an accurate indication repeat the test without an overlay again at the end and compare your results to this as a baseline</li>
+                                <li>You can restart the test by clicking the stop button at any time during the countdown</li>
+                                <li>If you want to see these instructions again click the See Instrustions button, this will also stop the testing</li>
+                            </ul> 
                         </div>                         
-                        <p id = "text-box" class = "text-box-default">
-                            Click the Start button to start the test. - The test will start a 30 second timer, read as many words as you can until you get an alert to stop.  Then click on the last word you read. You can change the colour of the overlays using the buttons at the top. 
-                        </p>                    
+                        <p id = "text-box" class = "text-box-default"></p>                    
                     </div>
                 </div>
             </div>    
@@ -77,6 +84,30 @@
                 <label for ="email">Email: <input type = "email" id= "email" name = "email" required></label>           
                 <button id = "email-btn" type = "submit" class="results-area">Email My Results</button>    
             </form>
+        </div>
+        <div id="advise" >
+            <h4 class ="headings">Results Advice</h4>
+            <p class = "container">  
+                If you found you achieved more words with an overlay work out how much your reading speed increased by using the calculator below.  We advise that you do the test again now you are used to the test without an overlay and use  this score as your baseline result. Use the highest score achieved as your Top Score. 
+            </p>
+            <label for = "operand1">Baseline : <input type ="number" id = "baseline"></label>
+            <label for = "operand2">Top Score : <input type ="number" id = "top-score"></label>
+            <button id= "calculate-btn" data-type="submit">Submit</button>
+            <p id="percentage-result"></p>
+            <div>
+                <div class="advise-col">
+                    <h5 class= "subheading">If there was an increase of more than 5%</h5>
+                    <p>If your wordcount increased by more than 5% an overlay may be helpful. You can find out where to get them and additional advise on our resouces page <a href = "resources.html">here</a>We do recommend that you have an overlay assesment carried out by a specialist Optometrist to rule out any additional pathology</p>
+                </div>
+                <div class="advise-col">
+                    <h5 class= "subheading">If there was an increase but it was less than 5%</h5>
+                    <p>If your wordcount increased by less than 5% may not be of much use.  If you find it more comfortable to read through an overlay. You can find out where to get them and additional advise on our resources page <a href = "resources.html">here</a> We do recommend that you keep your eye examinations up to date with an Optometrist to check the health of your eyes.</p>
+                </div>
+                <div class="advise-col">
+                    <h5 class= "subheading">If there was a decrease</h5>
+                    <p>It doesn't look like an overlay is helpful. If you are having issues with your vision we recommend that you keep your eye examinations up to date with an Optometrist.</p>
+                </div> 
+            </div>            
         </div>
     </section>
     <footer>

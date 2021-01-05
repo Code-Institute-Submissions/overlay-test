@@ -9,6 +9,8 @@
     --blue-background: #03506f;
 }
 
+/* Generic styling */
+
 * {
     margin:0px;    
 }
@@ -29,20 +31,8 @@ a {
     text-decoration: none;
     color: var(--pink-color);
 }
-
-.logo a {
-    color:rgb(243, 240, 225);
-}
-
-.logo {
-    margin:0;
-    padding: 2rem;
-}
-
-h3 .logo{
-    padding: 0.5%;
-    font-size: 120%;
-    letter-spacing: 0.1rem;    
+a:hover {
+    color: rgb(155, 43, 62);
 }
 
 .headings {
@@ -59,7 +49,27 @@ h3 .logo{
 
 .text-left {
     text-align: left;
-}    
+}   
+
+button {
+    margin: 1.5rem; 
+    margin-bottom: 0.01rem;
+    padding: 0.5rem;
+    border: 1px inset pink;
+    border-radius: 7%;
+    background-color:var(--pink-color);
+    font-family: var(--mainfont);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    margin: 3%;
+}
+
+/* Header */
 
 header {    
     background-color:  rgb(19, 19, 43);
@@ -69,6 +79,20 @@ header {
 h1 {    
     font-size:270%;
     letter-spacing: 0.15rem;
+}
+.logo a {
+    color:rgb(243, 240, 225);
+}
+
+.logo {
+    margin:0;
+    padding: 2rem;
+}
+
+h3 .logo{
+    padding: 0.5%;
+    font-size: 120%;
+    letter-spacing: 0.1rem;    
 }
 
 .nav-bar {
@@ -89,24 +113,11 @@ h1 {
     color: var(--pink-color);
 }
 
-
+/* Home Page */
+/* About area */
 .about {
     margin-right:10%;
     margin-left:10%;
-}
-
-button {
-    margin: 1.5rem; 
-    margin-bottom: 0.01rem;
-    padding: 0.5rem;
-    border: 1px inset pink;
-    border-radius: 7%;
-    background-color:var(--pink-color);
-    font-family: var(--mainfont);
-}
-
-button:hover {
-    opacity: 0.8;
 }
 
 .overlay-btns {
@@ -115,11 +126,17 @@ button:hover {
 }
 .symptoms-container{
     margin: 3%;
-}    
+}   
 
-ul {
+li {
+    padding: 0.15rem;
+}
+
+ul .about {
     margin-top: 3%;
 }
+
+/*Testing Area - incluldes classes to be added and removed in overlay-test.js*/
 
 #test-area {
     margin: 1%;
@@ -136,6 +153,10 @@ ul {
     text-align: center;    
 }
 
+.words:hover {
+    background-color: rgb(247, 248, 203);
+}
+
 #overlay-effect {    
     position: relative;
 }
@@ -145,14 +166,22 @@ ul {
     margin-bottom: 1%;
 }
 
-.stop-test {
+#instructions {
+    font-family: serif;
+    margin-left: 10%;
     margin-top: 2%;
+}
+
+.instruction-btn {
     background-color: var(--blue-background);
     color: var(--sub-font-color);
-    opacity: 0.7;
-    border-radius: 5%;
-    width: 40%;
-    margin: auto;
+}
+
+.hide-instructions {
+    display: none;
+}
+.show-instructions {
+    display: block;
 }
 
 #testing-area {
@@ -175,12 +204,23 @@ ul {
     padding-top: 0%; 
     font-family: serif;
 }
+
 .text-box-default {
     z-index: -1
 }
 
 .text-box-live {
     z-index: 2;
+}
+
+.stop-test {
+    margin-top: 2%;
+    background-color: var(--blue-background);
+    color: var(--sub-font-color);
+    opacity: 0.7;
+    border-radius: 5%;
+    width: 40%;
+    margin: auto;
 }
 
 .start-test {
@@ -193,9 +233,7 @@ ul {
     color:var(--sub-font-color);
 }
 
-.words:hover {
-    background-color: rgb(247, 248, 203);
-}
+/* Results area - table and form */
 
 #results {
     display: none;
@@ -207,26 +245,36 @@ ul {
 input, label {
     display: inline-block;
 }
-/* Table */
+
 
 table {
     margin: 1.5rem;
-}
-.table-color {
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 2%;
     display: inline-block; 
-    border-spacing: 0px;
-    color: black;    
-} 
+    border-spacing: 0px;  
+}
 
 th, td {
     padding: 1rem;
     padding-left: 4rem;
     padding-right:4rem;
     background-color: rgb(247, 248, 203);
-    border: 1px solid black;    
+    border: 1px solid black;
+    border-radius: 2%;
+    color: black;  
 }
+
+#advise {
+    display:none;
+}
+
+.advise-col {
+    margin: 1%;
+    font-size: 1rem;
+}
+
+/* Footer */
 
 footer {
     background-color: var(--blue-background);
@@ -242,11 +290,6 @@ embed {
     width:95%;
     height: 20rem;
 }
-
-.container {
-    margin: 3%;
-}
-
 
 @media (min-width: 850px) {
     
@@ -265,6 +308,12 @@ embed {
         padding-right: 10%;
         padding-left: 10%;
     }
+
+    .advise-col {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+}
 
    footer > p {
         display: inline-block;
