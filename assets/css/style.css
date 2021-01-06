@@ -238,7 +238,7 @@ ul#symptoms-list {
 }
 
 .text-box-default {
-    z-index: -1
+    z-index: -1;
 }
 
 .text-box-live {
@@ -338,11 +338,17 @@ footer {
     background-color: var(--blue-background);
     color: var(--sub-font-color);
     margin-top: 5%;
+    padding-bottom: 1px;
 }
 
 footer > p {
     text-align: center;
     margin: 1%;
+}
+
+.advise-col p {
+    font-size: 0.8rem;
+    margin: 0.2rem;
 }
 
 @media (min-width: 850px) {
@@ -412,8 +418,6 @@ footer > p {
 }
 
    footer > p {
-        display: inline-block;
-        width: 31%;
         padding: 0.5%;
     }
 }

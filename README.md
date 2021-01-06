@@ -64,7 +64,13 @@ As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short te
 
 
 #### What a user may want 
-
+* A way to check different coloured overlays
+* A way to record down scores
+* Information about places that offer additional services
+* A way to receive their results
+* Information about what their results mean 
+* To be able to buy overlays
+* A way to contact the the company to ask further questions
 
 
 #### As a developer / business I expect
