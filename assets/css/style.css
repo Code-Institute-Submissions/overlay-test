@@ -25,8 +25,9 @@ html {
 }
 
 p {
-    margin: 0.5%;
-    margin-bottom: 2%;
+    margin: 1%;
+    margin-bottom: 4%;
+    font-size: 1.1rem;
 }
 
 a { 
@@ -36,7 +37,7 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 a:hover {
@@ -44,14 +45,14 @@ a:hover {
 }
 
 .headings {
-    padding-top:1.25%;
-    padding-bottom: 0.75%;
     font-size: 2rem;
-    margin:0;
+    margin:3%;
+    margin-top: 7%;
 }
 
 .sub-headings {
     padding: 1%;
+    margin-bottom: 3%;
     font-size:1.3rem;
 }
 
@@ -70,7 +71,7 @@ button, a#jump-link {
     color: var(--font-color);
 }
 
-button:hover {
+button:hover, a#jump-link:hover {
     opacity: 0.8;
 }
 
@@ -78,6 +79,11 @@ button:hover {
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+.wide-container {
+    margin: 0.2%;
 }
 
 /* Header */
@@ -135,6 +141,17 @@ h3 .logo{
     margin: 3%;
 }   
 
+.symptoms-col {
+        width:100%;
+        display: block;
+    }
+
+img {
+    height: 60%;
+    width: 60%;
+    margin-top: 4%;
+}    
+
 li {
     padding: 0.15rem;
 }
@@ -142,6 +159,7 @@ li {
 ul#symptoms-list {
     margin-top: 3%;
     list-style: square;
+    margin-left: 7%;
 }
 
 /*Testing Area - incluldes classes to be added and removed in overlay-test.js*/
@@ -212,7 +230,7 @@ ul#symptoms-list {
 
 #text-box {
     position: relative; 
-    padding: 6%;   
+    padding: 2%;   
     padding-top: 0%; 
     font-family: serif;
 }
@@ -225,13 +243,17 @@ ul#symptoms-list {
     z-index: 2;
 }
 
+#count-box-container {
+    height:3rem;
+}
+
 .stop-test {
     margin-top: 2%;
     background-color: var(--blue-background);
     color: var(--sub-font-color);
     opacity: 0.7;
     border-radius: 5%;
-    width: 40%;
+    width: 90%;
     margin: auto;
 }
 
@@ -253,6 +275,10 @@ ul#symptoms-list {
 
 .results-area {
     margin-bottom:1rem;
+}
+
+.results {
+    margin-top: 3%;
 }
 
 input, label {
@@ -296,19 +322,29 @@ footer {
 
 footer > p {
     text-align: center;
+    margin: 1%;
 }
 
 @media (min-width: 850px) {
-    
-    embed {
-        width:75%;
-        height: 20rem;
-    }
+
     .symptoms-container{
         margin-right:20%;
         margin-left: 20%;
         margin-top: 2%;
-        margin-bottom: 2%;
+    }
+    .symptoms-col {
+        width:45%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    img {
+        width: 80%;
+        height: 80%;
+        margin-top: 2%;
+    }
+
+    ul#symptoms-list {
+        margin-left: 2%;
     }
 
     .test-container {
@@ -319,6 +355,10 @@ footer > p {
     #instructions {
         margin-left: 10%;
         margin-right: 10%;
+    }
+
+    .stop-test {
+        width: 40%;
     }
 
     .advise-col {
@@ -333,4 +373,14 @@ footer > p {
         padding: 0.5%;
     }
 }
+
+@media (min-width: 1600px) {
+
+    section {
+        max-width: 1700px;
+        margin: auto;
+    }
+}
+
+
 
