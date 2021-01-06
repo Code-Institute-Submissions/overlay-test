@@ -1,6 +1,6 @@
 # Overlay Test
 
-![Main Mockup]
+![Main Mockup](readme-file/mockup.png)
 
 [Link to Live Website](https://crypticcaroline.github.io/overlay-test/index.html)
 
