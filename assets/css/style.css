@@ -173,7 +173,6 @@ ul#symptoms-list {
 
 #instructions {
     font-family: serif;
-    margin-left: 10%;
     margin-top: 2%;
 }
 
@@ -243,6 +242,7 @@ ul#symptoms-list {
 #results {
     display: none;
 }
+
 .results-area {
     margin-bottom:1rem;
 }
@@ -313,6 +313,11 @@ footer > p {
     .test-container {
         padding-right: 10%;
         padding-left: 10%;
+    }
+
+    #instructions {
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .advise-col {
