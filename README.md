@@ -2,9 +2,9 @@
 
 ![Main Mockup]
 
-[Link to Live Website]
+[Link to Live Website](https://crypticcaroline.github.io/overlay-test/index.html)
 
-[GitHub Repo]
+[GitHub Repo](https://github.com/crypticCaroline/overlay-test)
 
 *** 
 
@@ -21,9 +21,7 @@ Visual Stress is a common condition that affects an estimated 20% of the populat
 *	Glare on page
 
 Research over the last 20 years has show that using a coloured filter can alleviate the symptoms and increase reading speed by up to 38%. 
-As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It wasn’t until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses. This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested.    
-
-
+As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It wasn’t until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses. This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested.   
 
 
 ## Index – Table of Contents
@@ -45,13 +43,24 @@ As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short te
 ### User Stories  
 
 #### Reasons a user may visit the website
-
+* Doing research on visual stress either for themselves of for a family member
+* Experiencing symptoms of visual stress and want to test themselves / child
+* Trying to find out if using an overlay may increase their reading speed
 
 #### Reasons for the website
+* Provide information to users about what visual stress is and how to get additional help
+* Provide a way of testing for signs of visual stress
+* To demonstrate what it looks like to use an overlay
+* Spread awareness of visual stress to a wider group of people. 
   
 
 ## Scope
 #### What a user may expect
+* Easy to navigate website
+* Good presentation and visually appealing
+* Links and functions work as expected
+* Users to find information about visual stress
+* Have a way to test for visual stress
 
 
 #### What a user may want 
