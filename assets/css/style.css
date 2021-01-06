@@ -76,8 +76,8 @@ button:hover, a#jump-link:hover {
 }
 
 .container {
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 10.5%;
+    margin-left: 10.5%;
     margin-bottom: 2%;
     margin-top: 3%;
 }
@@ -340,7 +340,7 @@ footer > p {
     img {
         width: 80%;
         height: 80%;
-        margin-top: 2%;
+        margin-top: 2%;  
     }
 
     ul#symptoms-list {

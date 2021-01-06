@@ -10,6 +10,20 @@
 
 ## About  
 
+Visual Stress is a common condition that affects an estimated 20% of the population.  This causes issues in the visual cortex of the brain which is commonly experienced by people with dyslexia.  Visual stress however is an entirely separate and distinct condition.  Not all people with dyslexia will suffer from Visual stress and not all people with Visual Stress will be dyslexic.   Visual Stress comes in a variety of symptoms including : 
+*	Headaches
+*	Blurring of print
+*	Noticing white "rivers" running down the page. The white background stands out more than text above it.
+*	Losing place within text, skipping words or lines
+*	Words appearing to move or jump
+*	Eyestrain
+*	Difficulty in understanding the text being read
+*	Glare on page
+
+Research over the last 20 years has show that using a coloured filter can alleviate the symptoms and increase reading speed by up to 38%. 
+As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It wasn’t until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses. This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested.    
+
+
 
 
 ## Index – Table of Contents
