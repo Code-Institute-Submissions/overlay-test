@@ -234,6 +234,7 @@ ul#symptoms-list {
     padding: 2%;   
     padding-top: 0%; 
     font-family: serif;
+    font-size: initial;
 }
 
 .text-box-default {
@@ -283,7 +284,13 @@ ul#symptoms-list {
 }
 
 input, label {
-    display: inline-block;
+    display: block;
+    margin:auto;
+}
+input.number-input {
+    width: 30%;
+    margin: auto;
+    margin-top: 0.5rem;
 }
 
 input:hover {
@@ -308,9 +315,21 @@ th, td {
     color: black;  
 }
 
+#email-btn {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
 .advise-col {
     margin: 1%;
     font-size: 1rem;
+}
+
+#calculate-btn {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 /* Footer */
@@ -365,6 +384,25 @@ footer > p {
     th, td {
         padding-left: 4rem;
         padding-right:4rem;
+    }
+
+    label{
+        display: inline-block;
+        margin: auto;
+    }
+
+    #email-btn {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0;
+    }
+
+    input{
+        margin: 1rem;
+    }
+
+    input.number-input {
+        width: 70%;
     }
 
     .advise-col {
