@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "assets/css/style.css" rel = "stylesheet">
+    <title>Redirecting </title>
+  </head>       
+  <body onload="redirect()">
+  <header>
+        <div class="logo">
+            <h1><a href="index.html">The Overlay Test</a></h1>
+        </div>                   
+  </header>      
+	<h2 class= "headings">Redirecting....</h2>
+    <h3 class="sub-headings">Back to The Overlay Test</h3>
+	<script>
+	  function redirect() {
+		setTimeout(function(){ 
+				window.location.replace("index.html");
+			}
+			, 400);	
+		}
+	</script>
+  </body>
+</html>
