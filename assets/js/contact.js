@@ -18,7 +18,7 @@ function sendMail(resultsForm) {
     for(let i = 0; i < wordCount.length; i++) {
         let str1 = wordCount[i].innerHTML;
         let str2 = overlayColour[i].innerHTML;
-        let wordStr = ("You read " + str1 + " with " + str2 + "! \n");  
+        let wordStr = ("You read " + str1 + " with " + str2 + "!" + "\n");  
         resultStr += wordStr;
     }
        
