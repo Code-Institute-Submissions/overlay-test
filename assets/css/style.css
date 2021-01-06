@@ -341,13 +341,9 @@ footer {
     padding-bottom: 1px;
 }
 
-footer > p {
+#footer-text p {
     text-align: center;
-    margin: 1%;
-}
-
-.advise-col p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0.2rem;
 }
 

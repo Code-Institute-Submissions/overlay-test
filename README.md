@@ -1,6 +1,6 @@
 # Overlay Test
 
-![Main Mockup](readme-file/mockup.png)
+![Main Mockup](readme-files/mockup.png)
 
 [Link to Live Website](https://crypticcaroline.github.io/overlay-test/index.html)
 
@@ -74,9 +74,13 @@ As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short te
 
 
 #### As a developer / business I expect
+* To provide an easy to use website
+* To give users useful information about visual stress
+* To provide a way for users to test to see if they could benefit from an overlay
+* To provide the results and be able to send them to the user
+* To signpost users to other resources that may be benefical for them 
 
 ## Structure
-
 
 ***
 
