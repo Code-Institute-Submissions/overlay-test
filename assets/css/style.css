@@ -33,6 +33,11 @@ a {
     color: var(--pink-color);
 }
 
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
 a:hover {
     color: rgb(155, 43, 62);
 }
@@ -276,13 +281,6 @@ th, td {
 .advise-col {
     margin: 1%;
     font-size: 1rem;
-}
-
-/*  Resources page */
-
-ul {
-    list-style: none;
-    padding-inline-start: 0px;
 }
 
 /* Footer */
