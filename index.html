@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href = "assets/css/style.css" rel = "stylesheet">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type = "text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
     (function() {
     emailjs.init("user_5I77sqs4w8AR9K52gjkiC");
     })();
@@ -27,7 +27,7 @@
             <h2 class = "headings">About the Overlay Test</h2>
             <p> This Overlay Test is designed to aid in the detection of signs of Visual stress, the test below will help you to find out if a coloured overlay may increase your reading speed.  This tool is not a diagnosis for Visual Stress but may help identify if an overlay may be useful. The test is best run on a desktop or laptop. If you or you child suffers from reading difficulties, eyestrain or headaches you may want to find out whether or not you have a visual stress issue.  We advise that you have your eyes checked regularly by an Optometrist.  Please check out our resources page <a href = "resources.html">here</a> for more information on Visual Stress and where to get additional support, advise and materials.
             </p> 
-            <a href = "#test-area"><button>Jump to Test</button></a>
+            <a id = "jump-link" href = "#test-area">Jump to Test</a>
             <div class="symptoms-container">
                 <h3 class = "headings">What are signs of Visual Stress</h3>
                 <p>Visual Stress can vary from person to person but symptoms may include:</p>
@@ -77,7 +77,7 @@
         <div id="results">
             <h3 class = "headings">Results</h3>
             <h4 class= "results-area"> Total words you read in 30 seconds</h4>
-            <table id="results-table" name = "results"></table>
+            <table id="results-table" ></table>
             <form onsubmit = "return sendMail(this)" id= "form-area">  
                 <label for ="name">Name: <input type = "text" id= "name" name = "name" required></label>
                 <label for ="email">Email: <input type = "email" id= "email" name = "email" required></label>           
@@ -115,7 +115,7 @@
         <p class = "text-center">Copyright @ Rebecca Kelsall</p>        
     </footer>
     
-    <script type= "text/javascript" src = "assets/js/overlay-test.js"></script>
-    <script src="assets/js/contact.js" type = "text/javascript"></script>    
+    <script src = "assets/js/overlay-test.js"></script>
+    <script src="assets/js/contact.js" ></script>    
 </body>
 </html>
