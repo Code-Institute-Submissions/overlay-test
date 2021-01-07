@@ -9,6 +9,7 @@
     --blue-background: rgb(3,80,111);
 }
 
+
 /* Generic styling */
 
 * {
@@ -221,7 +222,7 @@ ul#symptoms-list {
 
 #testing-area {
     margin: 0.3%;
-    background-color: rgb(225,225,225);
+    background-color: rgb(255,255,255);
     position: relative;    
 }
 

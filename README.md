@@ -177,17 +177,25 @@ I have styled containers and added padding and margins to ensure that the conten
 #### Universal Features Across the Site
 
 ###### Logo and Navigation Bar
+The Navigation Bar is at the top of the webpage. The logo and nav links all change colour when they are hovered over. The active page is set to pink so the user knows what page they are on.  The nav links direct the user to the correct page of the website. When the logo is clicked on it will take the user to the home page. 
 
 
 ###### Responsiveness
 
-
+The website is fully responsive between different screen resolutions.  I have done this by using media queries.  I have changed the width and included content within containers so that everything stays neat and in the correct order. 
 
 ###### Accessibility
 
-
+* I have been careful to set all fonts in rem so that if the user has set their setting to a larger size the website will cater for this.  
+* There is high contrast throughout to make the site easy to use. 
+* I have used a sans serif font for the body of the website to ensure readability for users who have visual stress or issues with reading serif fonts.  
+* All headings are in desending order to make the page easier for a screen reader.  
+T* he test it self is not very suitable for a screen reader, this is because the test is designed for users to asses their reading speed.  
+* With this release you have to click on the word in order to get your results.  In future version it would be good to add the ability to use a key press as well for users unable to opperate a mouse. 
 
 ###### Footer 
+
+The Footer is split into three sections, an opening hours, copyright and contact. Although this is a testing website rather than a buisness users may want to get in contact with the website developers to let them know of any bugs or to ask questions about visual stress.   
 
 
 ##### Meta data
@@ -202,13 +210,14 @@ I have styled containers and added padding and margins to ensure that the conten
 
 #### Features Specific to Pages
 
-###### Homepage 
+###### The Test 
 
-###### Testimonial
-
- 
 
 ###### Email
+
+###### Calculator
+
+
 
 ### Future Features 
 

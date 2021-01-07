@@ -118,6 +118,7 @@ function buildButtons() {
     instructionBtn()
 };
 
+
 /** Button that the user can click to see the instructions again
  * This calls the stop test function and reverts the classes
  */
@@ -286,7 +287,6 @@ function testResult(data_word_number) {
     revertIndex()
    
    if (resultsTable.hasChildNodes()) {
-        console.log('table already made')
         createRow(data_word_number)
     } else {
         createTable()
