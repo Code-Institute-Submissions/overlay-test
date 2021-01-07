@@ -9,19 +9,23 @@
 *** 
 
 ## About  
-
 Visual Stress is a common condition that affects an estimated 20% of the population.  This causes issues in the visual cortex of the brain which is commonly experienced by people with dyslexia.  Visual stress however is an entirely separate and distinct condition.  Not all people with dyslexia will suffer from Visual stress and not all people with Visual Stress will be dyslexic.   Visual Stress comes in a variety of symptoms including : 
-*	Headaches
-*	Blurring of print
-*	Noticing white "rivers" running down the page. The white background stands out more than text above it.
-*	Losing place within text, skipping words or lines
-*	Words appearing to move or jump
-*	Eyestrain
-*	Difficulty in understanding the text being read
-*	Glare on page
+*   Headaches
+*   Blurring of print
+*   Noticing white "rivers" running down the page. The white background stands out more than text above it.
+*   Losing place within text, skipping words or lines
+*   Words appearing to move or jump
+*   Eyestrain
+*   Difficulty in understanding the text being read
+*   Glare on page
 
 Research over the last 20 years has show that using a coloured filter can alleviate the symptoms and increase reading speed by up to 38%. 
-As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It wasn’t until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses. This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested.   
+As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It was not until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses.   
+
+Currently there is a small choice of online overlay test most of which are basic.   Most involve a start stop timer to measure how long it takes to read a passage, the test can be taken multiple times, but the text passage is the same throughout.  This could lead to test bias as the user starts to memorise the first few lines.   Other options I have found simply demonstrate what it looks like to have an overlay over the text.  Some of these options change the background colour rather than the overlay colour, which yields a different optical result.  
+
+This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested. 
+
 
 
 ## Index – Table of Contents
@@ -80,60 +84,90 @@ As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short te
 * To provide the results and be able to send them to the user
 * To signpost users to other resources that may be benefical for them 
 
+
 ## Structure
 
 ***
+The website will consist of two pages:
 
+The homepage which will consist of the test, some information on visual stess, results and results advise. 
+The resources page will include links to places to buy overlay and get additional advise and support. 
 
 
 ## Designs
 
 ## Surface
 
-
 #### Colour
 
+The colours I have used in the design are a mixture of two shades of blue and two shades of pink.   
+I have opted not to use red and green as this can be difficult for people that have a colour deficiency to see.  I used an off-white colour for the text on the dark background in the header and footer to make it stand
+
+I have used black on white text in the testing area.  This is because black writing on a white background can cause the worst symptoms of visual stress.   So, for the purpose of testing for signs of visual stress we want to create an environment where they are most likley to be present. 
+
+I have used another shade of pink for the link hovers. 
+
+I got Inspiration for my colour pallete from [Coolors](https://coolors.co/palettes/trending)
 
 
 #### Typography 
 
+I have chosen to use a font from [Google fonts](https://fonts.google.com/)  I have used Poppin.  This font is a sans serif font which means it does not have decoration at the end of the letter.  This can cause issues with readability seen in serif fonts.  The Poppins font is fun and playful, and offers nice spacing between the letters as standard.   
+
+I have used the default serif font for the test.  This is to encourage signs and symptoms of visual stress to show when taking the test. 
+
+For the headings I have inccreased the letter spacing to make it stand out. 
+
+I imported using the the following code at the top of my style.css file: 
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;&display=swap');
+
+
+
 #### Call to Action
 
+* For the buttons and links (styled as buttons)  I have changed the opacity on hover.  This is to show the user that the button can be clicked. 
+
+* I have used changed the colour of the text for the links in the main text to a pink colour, on hover the word gets darker.  Again this lets the user know the link can be clicked. 
+
+* In the test each word is contained within a span, this then changes when the word is hovered over after the test has run. When the test is live or not running you can not click on the word.  This is so the user doesn't get confused whilst taking the test.  
+
+* On the input fields I have used a pointer event to encourage the user to enter a value.  
 
 ### Imagery   
-Photo "https://unsplash.com/s/photos/learning-children?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
 
+I have used an example of visual stress in the main page.  I designed this using  [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word) to give a visual demonstration of what symptoms of visual stress may look like.  This would be particully helpful to teachers or parent running the test with a child.  
 
 
 ***
-
-
 
 ## Skeleton 
 
 
 ### Layout 
 
+I have used responsive design when creating the testing site.I have also set a Max-Width for the site so on very large screens the content stays neat and is well formatted.
+The test runs best on larger screens but will also work on a mobile.  Even though the test is designed for bigger devices I have designed the site mobile first.  As the window is expanded everything is neat and sits in line.  
 
+I have styled containers and added padding and margins to ensure that the content it not too close together and everything can be seen clearely. 
 
 #### Homepage Wire Frame 
+![Home Page](readme-files/homepage.png)
 
 
 
-#### Testimonial Wireframe
+#### Resources Wireframe
 
+![Resources](readme-files/resources.png)
 
-#### Form Wireframe 
-
-
- 
 
 ***
 
-
 ### Mockup
 
+![Test Page Mock Up](readme-files/testmock.png)
 
+![Resources Mock Up](readme-files/resourcesmockup.png)
 ***
 
 
