@@ -91,7 +91,7 @@ This test does not replace testing done by Optical professionals but may prove a
 The website will consist of two pages:
 
 The homepage which will consist of the test, some information on visual stess, results and results advise. 
-The resources page will include links to places to buy overlay and get additional advise and support. 
+The resources page will include links to places to buy overlay and get additional advise and support. The resources page with be fairly small start with but with space and scope to be able to add more features like "Find your local specalist". 
 
 
 ## Designs
@@ -164,12 +164,12 @@ I have styled containers and added padding and margins to ensure that the conten
 ***
 
 ### Mockup
-
+#### Home Page
 ![Test Page Mock Up](readme-files/testmock.png)
 
+#### Resources Page
 ![Resources Mock Up](readme-files/resourcesmockup.png)
 ***
-
 
 
 ## Features

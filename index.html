@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href = "assets/css/style.css" rel = "stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!-- Below is to initilise emailjs -->
     <script>
     (function() {
     emailjs.init("user_5I77sqs4w8AR9K52gjkiC");
@@ -23,12 +24,14 @@
         </nav>
     </header>
     <section>
+        <!-- About Section -->
         <div class="container">
             <h2 class = "headings">About the Overlay Test</h2>
             <p> This Overlay Test is designed to aid in the detection of signs of Visual stress, the test below will help you to find out if a coloured overlay may increase your reading speed.  This tool is not a diagnosis for Visual Stress but may help identify if an overlay may be useful. <b>The test is best run on a desktop or laptop.</b> If you or you child suffers from reading difficulties, eyestrain or headaches you may want to find out whether or not you have a visual stress issue.  We advise that you have your eyes checked regularly by an Optometrist.  Please check out our resources page <a href = "resources.html">here</a> for more information on Visual Stress and where to get additional support, advise and materials.
             </p> 
             <a id = "jump-link" href = "#test-area">Jump to Test</a>
         </div>    
+        <!-- Symptoms Section -->
         <div class="symptoms-container">
             <h3 class = "headings">What are symptoms of Visual Stress</h3>
             <p>Visual Stress can vary from person to person but symptoms may include:</p>
@@ -47,7 +50,8 @@
             <div class="symptoms-col">
                 <img src="assets/images/visual-stress.png" alt = "Example of visual stress">
             </div>
-        </div>    
+        </div>  
+        <!-- Test Section -->  
         <div id = "test-area" class = "container">
             <h4 class = "headings">The Overlay Test</h4>
             <div class="overlay-btns-container" id = "btns">                
@@ -79,21 +83,26 @@
             </div>    
             <button id="start-btn" class = "start-test">Start Test</button>
         </div> 
+        <!-- Results Section is hidden on load and will display once test run -->
         <div id="results" class="container">
             <h3 class = "headings results">Results</h3>
             <h4 class= "results-area"> Total words you read in 30 seconds</h4>
+            <!-- Results will be build into this table -->
             <table id="results-table" ></table>
+            <!-- Email to user Section -->
             <form onsubmit = "return sendMail(this)" id= "form-area">  
                 <label for ="name">Name: <input type = "text" id= "name" name = "name" required></label>
                 <label for ="email">Email: <input type = "email" id= "email" name = "email" required></label>           
                 <button id = "email-btn" type = "submit" class="results-area">Email My Results</button>    
             </form>
         </div>
+        <!-- Results Advise Section -->
         <div class = "container">
             <h4 class ="headings results">Results Advice</h4>
             <p>  
                 If you found you achieved more words with an overlay work out how much your reading speed increased by using the calculator below.  We advise that you do the test again now you are used to the test without an overlay and use  this score as your baseline result. Use the highest score achieved as your Top Score. 
             </p>
+            <!-- Calculator -->
             <div class ="container">
                 <label for = "baseline">Baseline :<input type ="number" id = "baseline" class = "number-input"></label>
                 <label for = "top-score">Top Score :<input type ="number" id = "top-score" class = "number-input"></label>
@@ -116,7 +125,8 @@
             </div> 
         </div>    
     </section>
-    <footer id ="footer-text">
+    <!-- Footer -->
+    <footer class ="footer-text">
         <div class="advise-col">
             <h5>Office Opening Hours </h5>
             <p class = "footer-text"> Monday-Friday : 9:00am -5:00pm</p>

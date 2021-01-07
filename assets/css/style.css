@@ -2,11 +2,11 @@
 
 :root {
     --mainfont: 'Poppins', sans-serif;
-    --font-color: #070327; 
+    --font-color: rgb(7,3,39); 
     --sub-font-color: rgb(243, 240, 225);  
-    --main-background-color: #f3e5e5;   
+    --main-background-color: rgb(243,229,229);   
     --pink-color:rgb(226, 104, 104);
-    --blue-background: #03506f;
+    --blue-background: rgb(3,80,111);
 }
 
 /* Generic styling */
@@ -59,6 +59,10 @@ a:hover {
 .text-left {
     text-align: left;
 }   
+.text-center {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 
 button, a#jump-link {
     margin: 1.5rem; 
@@ -135,7 +139,7 @@ h3 .logo{
 }
 
 /* Home Page */
-/* About area */
+/* About / symptoms / resources */
 
 .symptoms-container{
     margin: 3%;
@@ -180,8 +184,8 @@ ul#symptoms-list {
 }
 
 .testing-area, #overlay-effect{
-    border: 3px solid black;
-    color: black;  
+    border: 3px solid rgb(0,0,0);
+    color: rgb(0,0,0);  
     text-align: center;    
 }
 
@@ -217,7 +221,7 @@ ul#symptoms-list {
 
 #testing-area {
     margin: 0.3%;
-    background-color: white;
+    background-color: rgb(225,225,225);
     position: relative;    
 }
 
@@ -310,9 +314,9 @@ th, td {
     padding-right:1rem;
     padding-left:1rem;
     background-color: rgb(247, 248, 203);
-    border: 1px solid black;
+    border: 1px solid var(--blue-background);
     border-radius: 2%;
-    color: black;  
+    color: var(--blue-background);  
 }
 
 #email-btn {
@@ -321,6 +325,7 @@ th, td {
     margin-top: 1rem;
 }
 
+/* Results Advise */
 .advise-col {
     margin: 1%;
     font-size: 1rem;
@@ -341,10 +346,11 @@ footer {
     padding-bottom: 1px;
 }
 
-#footer-text p {
+.footer-text p {
     text-align: center;
     font-size: 0.9rem;
-    margin: 0.2rem;
+    margin:auto;
+    vertical-align: middle;
 }
 
 @media (min-width: 850px) {
@@ -405,6 +411,11 @@ footer {
 
     input.number-input {
         width: 70%;
+    }
+
+    .text-center {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .advise-col {
