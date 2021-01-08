@@ -128,7 +128,7 @@ I imported using the the following code at the top of my style.css file:
 
 * For the buttons and links (styled as buttons)  I have changed the opacity on hover.  This is to show the user that the button can be clicked. 
 
-* I have used changed the colour of the text for the links in the main text to a pink colour, on hover the word gets darker.  Again this lets the user know the link can be clicked. 
+* I have used changed the colour of the text for the links in the main text to a dark pink colour, on hover the word goes blue  This lets the user know the link can be clicked. 
 
 * In the test each word is contained within a span, this then changes when the word is hovered over after the test has run. When the test is live or not running you can not click on the word.  This is so the user doesn't get confused whilst taking the test.  
 
@@ -190,7 +190,7 @@ The website is fully responsive between different screen resolutions.  I have do
 * There is high contrast throughout to make the site easy to use. 
 * I have used a sans serif font for the body of the website to ensure readability for users who have visual stress or issues with reading serif fonts.  
 * All headings are in desending order to make the page easier for a screen reader.  
-T* he test it self is not very suitable for a screen reader, this is because the test is designed for users to asses their reading speed.  
+* The test it self is not very suitable for a screen reader, this is because the test is designed for users to asses their reading speed.  
 * With this release you have to click on the word in order to get your results.  In future version it would be good to add the ability to use a key press as well for users unable to opperate a mouse. 
 
 ###### Footer 
@@ -200,10 +200,13 @@ The Footer is split into three sections, an opening hours, copyright and contact
 
 ##### Meta data
 
+I have added keywords, author and description to the meta data to make the website easier to find.  This increases traffic to the website.  I have also given each page a different name so the user knows which tab they are on. 
 
 
 
 ##### Redirect
+
+I have added a generic 404 page with a small amount of styling.  I have written the Java Script directly into the html so that there is no delay in redirecting the user.  
 
 
 *** 
@@ -212,17 +215,32 @@ The Footer is split into three sections, an opening hours, copyright and contact
 
 ###### The Test 
 
+The overlay is situated at the bottom of the webpage underneath some important information about visual stress.  There is a jump to test button at the bottom of the opening paragraph for users who wish to skip straight to the test.   Inside the test box are the instructions of how to carry out the test. The user can change the colour of the overlay using the buttons above the box. 
+
+When the user presses the start button underneath the test box:
+
+* The instructions are removed and a randomly generated paragraph of predefined words appear. 
+* A 30 second timer is started and the count down is indicated above the text. 
+*   If the user presses the stop button this clears the timer. If the user clicks the see instructions button this will clear the timer and reshow the instructions. 
+* At the end of the timer the user is asked to stop and to click the last word they read.  The text is highlighted in blue to make it more apparent to stop.  
+*  When the users mouse hovers over each word the background changes, this makes it easier for the user to see the word they are selecting. 
+*  The user it shown their result and a delayed alert is displayed letting the user know their result has been added to a table. 
+* A table is construsted the first time the test is run and all results are appended to the table below the test. 
+* The user can have their results emailed to them using email.js when they fill out their details into the input field. 
+* I have also used a calculator for the user to work out the wordspeed increase. To see whether using a coloured overlay may be benefical.  - this is not emailed to the user but could be a future feature.  
 
 ###### Email
 
+I have used [EmailJS](https://www.emailjs.com/) to send the email to the user.  This takes parameters defined in the contact.js file and the parameters set within the email template.  When the user clicks send email after they have submitted their details.  The email gets the data by using a loop to iterate through the results to create a string and pass the user all the results that they had.  
+
 ###### Calculator
 
-
+The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advise about what there % could mean and how they can get additional help and resources. 
 
 ### Future Features 
 
-
-
+* Calculator result are also sent.  This could work by the user entering a baseline test and then the results table working out the reading % for each of the results. 
+* The user could buy Overlays direct from the website. 
     
 
 ***
@@ -231,22 +249,22 @@ The Footer is split into three sections, an opening hours, copyright and contact
 
 * HTML5 - Mark-up language using semantic structure.
 * CCS3 - Cascading style sheet used to style.
+* JavaScript - Programming language.  
 * Gitpod.io - for writing the code. Using the command line for committing and pushing to Git Hub
-* GitHub -
-* GIT - 
+* GitHub - hosting repositories
+* GIT - Pushing code to repositories
+* [EmailJS](https://www.emailjs.com/)
  
 Design 
 
-* [Google fonts](https://fonts.google.com/) - 
-* [Balsamiq wireframe](https://balsamiq.com/) - 
-* [Font Awesome](https://fontawesome.com/) - 
-* [Beautifer](https://beautifier.io/) - 
-* [Tiny PNG](https://tinypng.com/) – 
+* [Google fonts](https://fonts.google.com/)  - for the font
+* [Balsamiq wireframe](https://balsamiq.com/)  - for creating the wireframes
+* [Beautifer](https://beautifier.io/) - for helping to keep code tidy
 Testing 
-* [HTML Validator](https://validator.w3.org/) 
-* [CSS Validator](https://validator.w3.org/) 
-* [IE NetREnderer](https://netrenderer.com/index.php)
-* [Am I Responsive](http://ami.responsivedesign.is/#) 
+* [HTML Validator](https://validator.w3.org/) - checking the validity of code
+* [CSS Validator](https://validator.w3.org/) - checking the validity of code
+* [IE NetREnderer](https://netrenderer.com/index.php) - checking how the test works on different platforms
+* [Am I Responsive](http://ami.responsivedesign.is/#) - checking whether the site is responsive. 
 * [Wave](https://wave.webaim.org/) 
 * DEV Tools - Lighthouse
 
@@ -264,6 +282,7 @@ Testing
 ### Usability Testing
 
 issue with alert blocking - changed to be innerhtml/countdown
+not working on internet Explorer
 
 [Wave](https://wave.webaim.org/) 
     
@@ -277,6 +296,7 @@ Tested for responsiveness using Chrome DevTools.
 
 ### Performance Testing
 Tested on the Developer Tools Lighthouse.  
+wave - contrast not strong enough for links changed to a darker pink and hover blue instead of a light pink colour. 
 
 ### Testing User Stories
 
