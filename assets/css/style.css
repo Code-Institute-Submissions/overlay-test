@@ -74,6 +74,8 @@ button, a#jump-link {
     background-color:var(--pink-color);
     font-family: var(--mainfont);
     color: var(--font-color);
+    font-weight: 400;
+    letter-spacing: 0.05rem;
 }
 
 button:hover, a#jump-link:hover {
@@ -123,7 +125,7 @@ h3 .logo{
 } 
 
 .nav-bar a.active  { 
-    color: var(--pink-color);
+    color:rgb(245,166, 166);
 }
 
 .nav-bar a.active:hover {
