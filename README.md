@@ -91,7 +91,7 @@ This test does not replace testing done by Optical professionals but may prove a
 The website will consist of two pages:
 
 The homepage which will consist of the test, some information on visual stess, results and results advise. 
-The resources page will include links to places to buy overlay and get additional advise and support. The resources page with be fairly small start with but with space and scope to be able to add more features like "Find your local specalist". 
+The resources page will include links to places to buy overlay and get additional advise and support. The resources page with be fairly small to start with but with space and scope to be able to add more features like "Find your local specalist". 
 
 
 ## Designs
@@ -195,6 +195,9 @@ The website is fully responsive between different screen resolutions.  I have do
 
 ###### Input Fields 
 
+* The email input fields are type specific, so will need to have a valid email and text, they are also set to be required in order for the user to submit. 
+* The calculator is number specific so users can not enter anything other than a number. 
+
 ###### Footer 
 
 The Footer is split into three sections, an opening hours, copyright and contact. Although this is a testing website rather than a buisness users may want to get in contact with the website developers to let them know of any bugs or to ask questions about visual stress.   
@@ -203,7 +206,6 @@ The Footer is split into three sections, an opening hours, copyright and contact
 ##### Meta data
 
 I have added keywords, author and description to the meta data to make the website easier to find.  This increases traffic to the website.  I have also given each page a different name so the user knows which tab they are on. 
-
 
 
 ##### Redirect
@@ -245,6 +247,8 @@ If the user doesn't enter anything into the input fields they will get a message
 
 * Calculator result are also sent.  This could work by the user entering a baseline test and then the results table working out the reading % for each of the results. 
 * The user could buy Overlays direct from the website. 
+* Add the ability to use a keypress to select a word instead of a mouse button for improved assesbility.
+* Resources page has a find your specalist section using an api such as google maps. 
     
 
 ***
@@ -268,7 +272,6 @@ Testing
 * [HTML Validator](https://validator.w3.org/) - checking the validity of code
 * [CSS Validator](https://validator.w3.org/) - checking the validity of code
 * [JS Validator](https://validatejavascript.com/) - checking for errors in code
-* [IE NetREnderer](https://netrenderer.com/index.php) - checking how the test works on different platforms
 * [Am I Responsive](http://ami.responsivedesign.is/#) - checking whether the site is responsive. 
 * [Wave](https://wave.webaim.org/) 
 * DEV Tools - Lighthouse
@@ -276,8 +279,6 @@ Testing
 ***
 
 ## Testing 
-
-
     
 [HTML Validator](https://validator.w3.org/)
 
@@ -286,26 +287,47 @@ Testing
 
 ### Usability Testing
 
-issue with alert blocking - changed to be innerhtml/countdown
-not working on internet Explorer - added function to check and alert user if ie 
+When deployed I had friends and family check the userbility of the website.  
+On first testing a user commented that they wanted to know when the test was running.  I added the stop start classes to the start button to display that the test was live. 
 
-[Wave](https://wave.webaim.org/) 
+A user commented that it would be nice to know how long was left on the test.  As a result I added the countdown to the test to allow the users to know how much longer they had. 
+
+Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to rememeber what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop.  
+
+A user tried to use Internet Explorer for the test and this would not work. Please see compatability testing for more information.  
+
+To ensure assesbility I ran the website through [Wave](https://wave.webaim.org/).   This showed that the contrast was not strong enough for links.  I changed the colour to a darker pink and on hover to blue to make it easier to see.
     
 ### Browser Compatibility
 
-Tested on Chrome, Firefox, Brave, Internet Explorer, Microsoft Edge, Safari.[IE NetREnderer](https://netrenderer.com/index.php) to test the older versions. 
+Tested on Chrome, Firefox, Brave, Internet Explorer, Microsoft Edge, Safari.
+
+When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatiable with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatiable with Internet Explorer
 
 ### OS Compatibility
  iOS, Android 10, and Windows 10. -
-Tested for responsiveness using Chrome DevTools.
+Tested for responsiveness using Chrome DevTools. Runs well on both IOS and Android 10. 
 
 ### Performance Testing
 Tested on the Developer Tools Lighthouse.  
-wave - contrast not strong enough for links changed to a darker pink and hover blue instead of a light pink colour. 
+ 
 
 ### Testing User Stories
 
 
+* Doing research on visual stress either for themselves of for a family member - users can find some basic information about visual stress on the main homepage and further links on the resources page
+* Experiencing symptoms of visual stress and want to test themselves / child - users can test for signs of visual stress using the test. 
+* Trying to find out if using an overlay may increase their reading speed - users can select different colours overlays to see if they make a difference to their reading speed. 
+
+
+#### What a user may want 
+* A way to check different coloured overlays  - using buttons above the test
+* A way to record down scores - build into the table as the test is carried out 
+* Information about places that offer additional services - more information on the resources page and sign posted in the advise columns at the bottom of the page
+* A way to receive their results - an email is sent to the user when fields filled out. 
+* Information about what their results mean  - adivse in the columns at the bottom of the page
+* To be able to buy overlays - not through the website but links provided in resources, could be a future feature.
+* A way to contact the the company to ask further questions - contact info supplied at the bottom of the page. 
 
 *** 
 
