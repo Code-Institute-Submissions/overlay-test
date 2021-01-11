@@ -82,7 +82,6 @@ const colors = [
     }
 ];
 
-
 let userAgent = window.navigator.userAgent;
 let isIE = /MSIE|Trident/.test(userAgent);
 console.log("is ie")
