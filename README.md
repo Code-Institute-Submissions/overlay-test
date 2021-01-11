@@ -19,11 +19,12 @@ Visual Stress is a common condition that affects an estimated 20% of the populat
 *   Difficulty in understanding the text being read
 *   Glare on page
 
-Research over the last 20 years has show that using a coloured filter can alleviate the symptoms and increase reading speed by up to 38%. 
+Research over the last 20 years has shown that using a coloured filter can alleviate the symptoms and increase reading speed by up to 38%. 
 As a sufferer of Visual Stress and Dyslexia myself I wanted to create a short test that may indicate if a user has Visual Stress and may benefit from the use of a coloured overlay. It was not until I was working in an optician when I was explaining the symptoms of Visual Stress to a patient that I started to wonder whether my own reading issues were caused by Visual stress.  Since being tested I have found a vast improvement with both Coloured Overlays and Colorimetry glasses.   
 
-Currently there is a small choice of online overlay test most of which are basic.   Most involve a start stop timer to measure how long it takes to read a passage, the test can be taken multiple times, but the text passage is the same throughout.  This could lead to test bias as the user starts to memorise the first few lines.   Other options I have found simply demonstrate what it looks like to have an overlay over the text.  Some of these options change the background colour rather than the overlay colour, which yields a different optical result.  
+Currently there is a small choice of online overlay test most of which are basic.   Most involve a start/stop timer to measure how long it takes to read a passage, the test can be taken multiple times, but the text passage is the same throughout.  This could lead to test bias as the user starts to memorise the first few lines.   Other options I have found simply demonstrate what it looks like to have an overlay over the text.  Some of these options change the background colour rather than the overlay colour, which yields a different optical result.  
 
+I wanted to create a test that was closer to the type of test you would get from an optical professional.
 This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested. 
 
 
@@ -74,7 +75,7 @@ This test does not replace testing done by Optical professionals but may prove a
 * A way to receive their results
 * Information about what their results mean 
 * To be able to buy overlays
-* A way to contact the the company to ask further questions
+* A way to contact the company to ask further questions
 
 
 #### As a developer / business I expect
@@ -82,7 +83,7 @@ This test does not replace testing done by Optical professionals but may prove a
 * To give users useful information about visual stress
 * To provide a way for users to test to see if they could benefit from an overlay
 * To provide the results and be able to send them to the user
-* To signpost users to other resources that may be benefical for them 
+* To signpost users to other resources that may be beneficial for them 
 
 
 ## Structure
@@ -90,8 +91,8 @@ This test does not replace testing done by Optical professionals but may prove a
 ***
 The website will consist of two pages:
 
-The homepage which will consist of the test, some information on visual stess, results and results advise. 
-The resources page will include links to places to buy overlay and get additional advise and support. The resources page with be fairly small to start with but with space and scope to be able to add more features like "Find your local specalist". 
+The homepage which will consist of the test, some information on visual stress, results and results advise. 
+The resources page will include links to places to buy overlay and get additional advice and support. The resources page with be fairly small to start with but with space and scope to be able to add more features like "Find your local specialist". 
 
 
 ## Designs
@@ -103,22 +104,22 @@ The resources page will include links to places to buy overlay and get additiona
 The colours I have used in the design are a mixture of two shades of blue and two shades of pink.   
 I have opted not to use red and green as this can be difficult for people that have a colour deficiency to see.  I used an off-white colour for the text on the dark background in the header and footer to make it stand
 
-I have used black on white text in the testing area.  This is because black writing on a white background can cause the worst symptoms of visual stress.   So, for the purpose of testing for signs of visual stress we want to create an environment where they are most likley to be present. 
+I have used black on white text in the testing area.  This is because black writing on a white background can cause the worst symptoms of visual stress.   So, for the purpose of testing for signs of visual stress we want to create an environment where the symptoms are most likely to be present. 
 
 I have used another shade of pink for the link hovers. 
 
-I got inspiration for my colour pallete from [Coolors](https://coolors.co/palettes/trending)
+I got inspiration for my colour palette from [Coolors](https://coolors.co/palettes/trending)
 
 
 #### Typography 
 
-I have chosen to use a font from [Google fonts](https://fonts.google.com/)  I have used Poppin.  This font is a sans serif font which means it does not have decoration at the end of the letter.  This can cause issues with readability seen in serif fonts.  The Poppins font is fun and playful, and offers nice spacing between the letters as standard.   
+I have chosen to use a font from [Google fonts](https://fonts.google.com/)  I have used Poppin.  This font is a sans serif font which means it does not have decoration at the end of the letter.  This can cause issues with readability seen in serif fonts.  The Poppins font is fun and playful and offers nice spacing between the letters as standard.   
 
 I have used the default serif font for the test.  This is to encourage signs and symptoms of visual stress to show when taking the test. 
 
 For the headings I have increased the letter spacing to make it stand out. 
 
-I imported using the the following code at the top of my style.css file: 
+I imported using the following code at the top of my style.css file: 
 
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;&display=swap');
 
@@ -130,13 +131,13 @@ I imported using the the following code at the top of my style.css file:
 
 * I have used changed the colour of the text for the links in the main text to a dark pink colour, on hover the word goes blue  This lets the user know the link can be clicked. 
 
-* In the test each word is contained within a span, this then changes when the word is hovered over after the test has run. When the test is live or not running you can not click on the word.  This is so the user doesn't get confused whilst taking the test.  
+* In the test each word is contained within a span, this then changes when the word is hovered over after the test has run. When the test is live or not running you cannot click on the word.  This is so the user does not get confused whilst taking the test.  
 
 * On the input fields I have used a pointer event to encourage the user to enter a value.  
 
 ### Imagery   
 
-I have used an example of visual stress in the main page.  I designed this using  [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word) to give a visual demonstration of what symptoms of visual stress may look like.  This would be particully helpful to teachers or parent running the test with a child.  
+I have used an example of visual stress in the main page.  I designed this using  [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word) to give a visual demonstration of what symptoms of visual stress may look like.  This would be particularly helpful to teachers or parent running the test with a child.  
 
 
 ***
@@ -146,10 +147,10 @@ I have used an example of visual stress in the main page.  I designed this using
 
 ### Layout 
 
-I have used responsive design when creating the testing site.I have also set a Max-Width for the site so on very large screens the content stays neat and is well formatted.
+I have used responsive design when creating the testing site. I have also set a Max-Width for the site so on very large screens the content stays neat and is well formatted.
 The test runs best on larger screens but will also work on a mobile.  Even though the test is designed for bigger devices I have designed the site mobile first.  As the window is expanded everything is neat and sits in line.  
 
-I have styled containers and added padding and margins to ensure that the content it not too close together and everything can be seen clearely. 
+I have styled containers and added padding and margins to ensure that the content it not to close together and everything can be seen clearly. 
 
 #### Homepage Wire Frame 
 ![Home Page](readme-files/homepage.png)
@@ -177,7 +178,7 @@ I have styled containers and added padding and margins to ensure that the conten
 #### Universal Features Across the Site
 
 ###### Logo and Navigation Bar
-The Navigation Bar is at the top of the webpage. The logo and nav links all change colour when they are hovered over. The active page is set to pink so the user knows what page they are on.  The nav links direct the user to the correct page of the website. When the logo is clicked on it will take the user to the home page. 
+The Navigation Bar is at the top of the webpage. The logo and nav links all change colour when they are hovered over. The active page is set to pink, so the user knows what page they are on.  The nav links direct the user to the correct page of the website. When the logo is clicked on it will take the user to the home page. 
 
 
 ###### Responsiveness
@@ -189,9 +190,9 @@ The website is fully responsive between different screen resolutions.  I have do
 * I have been careful to set all fonts in rem so that if the user has set their setting to a larger size the website will cater for this.  
 * There is high contrast throughout to make the site easy to use. 
 * I have used a sans serif font for the body of the website to ensure readability for users who have visual stress or issues with reading serif fonts.  
-* All headings are in desending order to make the page easier for a screen reader.  
-* The test it self is not very suitable for a screen reader, this is because the test is designed for users to asses their reading speed.  
-* With this release you have to click on the word in order to get your results.  In future version it would be good to add the ability to use a key press as well for users unable to opperate a mouse. 
+* All headings are in descending order to make the page easier for a screen reader.  
+* The test itself is not very suitable for a screen reader, this is because the test is designed for users to assess their reading speed.  
+* With this release you must click on the word to get your results. In future version it would be good to add the ability to use a key press as well for users unable to operate a mouse. 
 
 ###### Input Fields 
 
@@ -200,12 +201,12 @@ The website is fully responsive between different screen resolutions.  I have do
 
 ###### Footer 
 
-The Footer is split into three sections, an opening hours, copyright and contact. Although this is a testing website rather than a buisness users may want to get in contact with the website developers to let them know of any bugs or to ask questions about visual stress.   
+The Footer is split into three sections, an opening hours, copyright and contact. Although this is a testing website rather than a business users may want to get in contact with the website developers to let them know of any bugs or to ask questions about visual stress.   
 
 
 ##### Meta data
 
-I have added keywords, author and description to the meta data to make the website easier to find.  This increases traffic to the website.  I have also given each page a different name so the user knows which tab they are on. 
+I have added keywords, author and description to the meta data to make the website easier to find.  This increases traffic to the website.  I have also given each page a different name, so the user knows which tab they are on. 
 
 
 ##### Redirect
@@ -223,15 +224,15 @@ The overlay is situated at the bottom of the webpage underneath some important i
 
 When the user presses the start button underneath the test box:
 
-* The instructions are removed and a randomly generated paragraph of predefined words appear. 
-* A 30 second timer is started and the count down is indicated above the text. 
+* The instructions are removed, and a randomly generated paragraph of predefined words appear. 
+* A 30 second timer is started and the countdown is indicated above the text. 
 *   If the user presses the stop button this clears the timer. If the user clicks the see instructions button this will clear the timer and reshow the instructions. 
 * At the end of the timer the user is asked to stop and to click the last word they read.  The text is highlighted in blue to make it more apparent to stop.  
 *  When the users mouse hovers over each word the background changes, this makes it easier for the user to see the word they are selecting. 
 *  The user it shown their result and a delayed alert is displayed letting the user know their result has been added to a table. 
-* A table is construsted the first time the test is run and all results are appended to the table below the test. 
+* A table is constructed the first time the test is run, and all results are appended to the table below the test. 
 * The user can have their results emailed to them using email.js when they fill out their details into the input field. 
-* I have also used a calculator for the user to work out the wordspeed increase. To see whether using a coloured overlay may be benefical.  - this is not emailed to the user but could be a future feature.  
+* I have also used a calculator for the user to work out the wordspeed increase. To see whether using a coloured overlay may be beneficial.  - this is not emailed to the user but could be a future feature.  
 
 ###### Email
 
@@ -239,16 +240,16 @@ I have used [EmailJS](https://www.emailjs.com/) to send the email to the user.  
 
 ###### Calculator
 
-The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advise about what there % could mean and how they can get additional help and resources. 
+The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advice about what there % could mean and how they can get additional help and resources. 
 
-If the user doesn't enter anything into the input fields they will get a message saying to put numbers into both boxes.  
+If the user doesn't enter anything into the input fields, they will get a message saying to put numbers into both boxes.  
 
 ### Future Features 
 
 * Calculator result are also sent.  This could work by the user entering a baseline test and then the results table working out the reading % for each of the results. 
 * The user could buy Overlays direct from the website. 
-* Add the ability to use a keypress to select a word instead of a mouse button for improved assesbility.
-* Resources page has a find your specalist section using an api such as google maps. 
+* Add the ability to use a keypress to select a word instead of a mouse button for improved useability, for users who can not operate a mouse.
+* Resources page has a find your specialist section using an api such as google maps. 
     
 
 ***
@@ -294,22 +295,22 @@ No major warnings
 
 ### Usability Testing
 
-When deployed I had friends and family check the userbility of the website.  
+When deployed I had friends and family check the usability of the website.  
 On first testing a user commented that they wanted to know when the test was running.  I added the stop start classes to the start button to display that the test was live. 
 
-A user commented that it would be nice to know how long was left on the test.  As a result I added the countdown to the test to allow the users to know how much longer they had. 
+A user commented that it would be nice to know how long was left on the test.  As a result, I added the countdown to the test to allow the users to know how much longer they had. 
 
-Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to rememeber what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop.  
+Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop.  
 
-A user tried to use Internet Explorer for the test and this would not work. Please see compatability testing for more information.  
+A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
 
-To ensure assesbility I ran the website through [Wave](https://wave.webaim.org/).   This showed that the contrast was not strong enough for links.  I changed the colour to a darker pink and on hover to blue to make it easier to see.
+To ensure accessibility I ran the website through [Wave](https://wave.webaim.org/).   This showed that the contrast was not strong enough for links.  I changed the colour to a darker pink and on hover to blue to make it easier to see.
     
 ### Browser Compatibility
 
 Tested on Chrome, Firefox, Brave, Internet Explorer, Microsoft Edge, Safari.
 
-When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatiable with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatiable with Internet Explorer
+When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatible with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatible with Internet Explorer
 
 ### OS Compatibility
  iOS, Android 10, and Windows 10. -
@@ -318,7 +319,7 @@ Tested for responsiveness using Chrome DevTools. Runs well on both IOS and Andro
 ### Performance Testing
 Tested on the Developer Tools Lighthouse.  
 
-I used Lighthouse last in my testing to check for final things to improve and make sure eveything was working well.  I had not added rel= noopeners to my resources page, Dev Tools highlighted this and I made the adjustment. 
+I used Lighthouse last in my testing to check for final things to improve and make sure everything was working well.  I had not added rel= noopeners to my resources page, Dev Tools highlighted this and I made the adjustment. 
 
 ![Dev Tools](readme-files/lighthouse.png)
  
@@ -336,11 +337,11 @@ What a user may have wanted
 
 * *A way to check different coloured overlays*  - using buttons above the test
 * *A way to record down scores* - build into the table as the test is carried out 
-* *Information about places that offer additional services* - more information on the resources page and sign posted in the advise columns at the bottom of the page
+* *Information about places that offer additional services* - more information on the resources page and sign posted in the advice columns at the bottom of the page
 * *A way to receive their results* - an email is sent to the user when fields filled out. 
-* *Information about what their results mean*  - adivse in the columns at the bottom of the page
+* *Information about what their results mean*  - advice in the columns at the bottom of the page
 * *To be able to buy overlays* - not through the website but links provided in resources, could be a future feature.
-* *A way to contact the the company to ask further questions* - contact info supplied in the footer
+* *A way to contact the company to ask further questions* - contact info supplied in the footer
 
 *** 
 
@@ -419,7 +420,7 @@ Making a Local Clone
 * Brian Macharia- Mentor support, guidance, tips, and key things to look out for throughout the project. Helping me to check for errors and looking at my code. 
 * Anthony Lomax - for testing and reporting any bugs.  For helping me figure out how to use EmailJS parameters effectively, for also being my soundboard when trying to troubleshoot errors. 
 * Callum Hewitt - Having a look at code and making some best practice suggestions.
-* Josie Evans - for testing the website from an opticians point of view and making suggestions on how I could make the website work better for real life users. 
+* Josie Evans - for testing the website from an optician's point of view and making suggestions on how I could make the website work better for real life users. 
 * Rob Beaney - for testing and minor styling suggestions.  
 * Harry Smith - Checking use on mobile devices.
 * David Savage - Testing usability. 
