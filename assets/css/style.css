@@ -207,7 +207,13 @@ ul#symptoms-list {
 
 #instructions {
     font-family: serif;
-    margin-top: 2%;
+}
+
+#ie-message {
+    margin:0;
+    margin-top: 0.3rem;
+    padding:0;
+    text-align: center;
 }
 
 .instruction-btn {
@@ -240,6 +246,7 @@ ul#symptoms-list {
     position: relative; 
     padding: 2%;   
     padding-top: 0%; 
+    padding-bottom: 0%;
     font-family: serif;
     font-size: initial;
 }
@@ -286,7 +293,7 @@ ul#symptoms-list {
     margin-bottom:1rem;
 }
 
-.results {
+.results-heading {
     margin-top: 3%;
 }
 
