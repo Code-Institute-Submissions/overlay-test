@@ -2,26 +2,25 @@
 
 :root {
     --mainfont: 'Poppins', sans-serif;
-    --font-color: rgb(7,3,39); 
-    --sub-font-color: rgb(243, 240, 225);  
-    --main-background-color: rgb(243,229,229);   
-    --pink-color:rgb(226, 104, 104);
-    --blue-background: rgb(3,80,111);
+    --font-color: rgb(7, 3, 39);
+    --sub-font-color: rgb(243, 240, 225);
+    --main-background-color: rgb(243, 229, 229);
+    --pink-color: rgb(226, 104, 104);
+    --blue-background: rgb(3, 80, 111);
 }
-
 
 /* Generic styling */
 
 * {
-    margin:0px;    
+    margin: 0px;
 }
 
 html {
     width: 100%;
     text-align: center;
     background-color: var(--main-background-color);
-    color: var(--font-color); 
-    font-family:var(--mainfont);
+    color: var(--font-color);
+    font-family: var(--mainfont);
     font-weight: 400;
 }
 
@@ -31,9 +30,9 @@ p {
     font-size: 1.1rem;
 }
 
-a { 
+a {
     text-decoration: none;
-    color: rgb(162,46, 46);
+    color: rgb(162, 46, 46);
 }
 
 ul {
@@ -47,38 +46,41 @@ a:hover {
 
 .headings {
     font-size: 2rem;
-    margin:3%;
+    margin: 3%;
     margin-top: 7%;
 }
 
 .sub-headings {
     padding: 1%;
     margin-bottom: 3%;
-    font-size:1.3rem;
+    font-size: 1.3rem;
 }
 
 .text-left {
     text-align: left;
-}   
+}
+
 .text-center {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-button, a#jump-link {
-    margin: 1.5rem; 
+button,
+a#jump-link {
+    margin: 1.5rem;
     margin-bottom: 0.01rem;
     padding: 0.5rem;
     border: 1px inset pink;
     border-radius: 7%;
-    background-color:var(--pink-color);
+    background-color: var(--pink-color);
     font-family: var(--mainfont);
     color: var(--font-color);
     font-weight: 400;
     letter-spacing: 0.05rem;
 }
 
-button:hover, a#jump-link:hover {
+button:hover,
+a#jump-link:hover {
     opacity: 0.8;
 }
 
@@ -95,43 +97,44 @@ button:hover, a#jump-link:hover {
 
 /* Header */
 
-header {    
-    background-color:  rgb(19, 19, 43);
+header {
+    background-color: rgb(19, 19, 43);
     color: var(--sub-font-color);
 }
 
-h1 {    
-    font-size:270%;
+h1 {
+    font-size: 270%;
     letter-spacing: 0.15rem;
 }
+
 .logo a {
-    color:rgb(243, 240, 225);
+    color: rgb(243, 240, 225);
 }
 
 .logo {
-    margin:0;
+    margin: 0;
     padding: 2rem;
 }
 
-h3 .logo{
+h3 .logo {
     padding: 0.5%;
     font-size: 120%;
-    letter-spacing: 0.1rem;    
+    letter-spacing: 0.1rem;
 }
 
 .nav-bar {
     padding: 0.5%;
-    background-color: var(--blue-background);  
-} 
+    background-color: var(--blue-background);
+}
 
-.nav-bar a.active  { 
-    color:rgb(245,166, 166);
+.nav-bar a.active {
+    color: rgb(245, 166, 166);
 }
 
 .nav-bar a.active:hover {
-    color:rgb(218, 71, 96);
-
+    color: rgb(218, 71, 96);
 }
+
 .nav-bar a {
     color: var(--sub-font-color);
     padding: 1rem;
@@ -144,21 +147,21 @@ h3 .logo{
 /* Home Page */
 /* About / symptoms / resources */
 
-.symptoms-container{
+.symptoms-container {
     margin: 3%;
-}   
+}
 
 .symptoms-col {
-        width:100%;
-        display: block;
-    }
+    width: 100%;
+    display: block;
+}
 
 img {
     height: 60%;
     width: 60%;
     margin-top: 4%;
     border-radius: 2%;
-}    
+}
 
 li {
     padding: 0.15rem;
@@ -186,17 +189,18 @@ ul#symptoms-list {
     padding-right: 1%;
 }
 
-.testing-area, #overlay-effect{
-    border: 3px solid rgb(0,0,0);
-    color: rgb(0,0,0);  
-    text-align: center;    
+.testing-area,
+#overlay-effect {
+    border: 3px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 
 .words:hover {
     background-color: rgb(247, 248, 203);
 }
 
-#overlay-effect {    
+#overlay-effect {
     position: relative;
 }
 
@@ -210,9 +214,9 @@ ul#symptoms-list {
 }
 
 #ie-message {
-    margin:0;
+    margin: 0;
     margin-top: 0.3rem;
-    padding:0;
+    padding: 0;
     text-align: center;
 }
 
@@ -224,14 +228,15 @@ ul#symptoms-list {
 .hide-instructions {
     display: none;
 }
+
 .show-instructions {
     display: block;
 }
 
 #testing-area {
     margin: 0.3%;
-    background-color: rgb(255,255,255);
-    position: relative;    
+    background-color: rgb(255, 255, 255);
+    position: relative;
 }
 
 .test-area-default {
@@ -243,9 +248,9 @@ ul#symptoms-list {
 }
 
 #text-box {
-    position: relative; 
-    padding: 2%;   
-    padding-top: 0%; 
+    position: relative;
+    padding: 2%;
+    padding-top: 0%;
     padding-bottom: 0%;
     font-family: serif;
     font-size: initial;
@@ -260,7 +265,7 @@ ul#symptoms-list {
 }
 
 #count-box-container {
-    height:3rem;
+    height: 3rem;
 }
 
 .stop-test {
@@ -274,13 +279,13 @@ ul#symptoms-list {
 }
 
 .start-test {
-    background-color:var(--pink-color);
-    color:var(--font-color);
+    background-color: var(--pink-color);
+    color: var(--font-color);
 }
 
-.end-test {    
-    background-color:var(--blue-background);
-    color:var(--sub-font-color);
+.end-test {
+    background-color: var(--blue-background);
+    color: var(--sub-font-color);
 }
 
 /* Results area - table and form */
@@ -290,17 +295,19 @@ ul#symptoms-list {
 }
 
 .results-area {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 .results-heading {
     margin-top: 3%;
 }
 
-input, label {
+input,
+label {
     display: block;
-    margin:auto;
+    margin: auto;
 }
+
 input.number-input {
     width: 30%;
     margin: auto;
@@ -315,18 +322,19 @@ table {
     margin: 1.5rem;
     border: 1px solid black;
     border-radius: 2%;
-    display: inline-block; 
-    border-spacing: 0px;  
+    display: inline-block;
+    border-spacing: 0px;
 }
 
-th, td {
+th,
+td {
     padding: 0.3rem;
-    padding-right:1rem;
-    padding-left:1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     background-color: rgb(247, 248, 203);
     border: 1px solid rgb(1, 4, 46);
     border-radius: 2%;
-    color: var(--blue-background);  
+    color: var(--blue-background);
 }
 
 #email-btn {
@@ -359,26 +367,28 @@ footer {
 .footer-text p {
     text-align: center;
     font-size: 0.9rem;
-    margin:auto;
+    margin: auto;
     vertical-align: middle;
 }
 
 @media (min-width: 850px) {
 
-    .symptoms-container{
-        margin-right:20%;
+    .symptoms-container {
+        margin-right: 20%;
         margin-left: 20%;
         margin-top: 2%;
     }
+
     .symptoms-col {
-        width:45%;
+        width: 45%;
         display: inline-block;
         vertical-align: top;
     }
+
     img {
         width: 80%;
         height: 80%;
-        margin-top: 2%;  
+        margin-top: 2%;
     }
 
     ul#symptoms-list {
@@ -399,12 +409,13 @@ footer {
         width: 40%;
     }
 
-    th, td {
+    th,
+    td {
         padding-left: 4rem;
-        padding-right:4rem;
+        padding-right: 4rem;
     }
 
-    label{
+    label {
         display: inline-block;
         margin: auto;
     }
@@ -415,7 +426,7 @@ footer {
         margin-top: 0;
     }
 
-    input{
+    input {
         margin: 1rem;
     }
 
@@ -432,9 +443,9 @@ footer {
         width: 30%;
         display: inline-block;
         vertical-align: top;
-}
+    }
 
-   footer > p {
+    footer>p {
         padding: 0.5%;
     }
 }
@@ -446,6 +457,3 @@ footer {
         margin: auto;
     }
 }
-
-
-

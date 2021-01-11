@@ -271,7 +271,7 @@ Design
 Testing 
 * [HTML Validator](https://validator.w3.org/) - checking the validity of code
 * [CSS Validator](https://validator.w3.org/) - checking the validity of code
-* [JS Validator](https://validatejavascript.com/) - checking for errors in code
+* [JSHint](https://jshint.com/)- Testing and checking JS.  - checking for errors in code
 * [Am I Responsive](http://ami.responsivedesign.is/#) - checking whether the site is responsive. 
 * [Wave](https://wave.webaim.org/) 
 * DEV Tools - Lighthouse
@@ -282,8 +282,9 @@ Testing
     
 [HTML Validator](https://validator.w3.org/)
 
+[CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-[CSS Validator](https://validator.w3.org/)
+[JSHint](https://jshint.com/)- Testing and checking JS. 
 
 ### Usability Testing
 
@@ -419,8 +420,8 @@ Making a Local Clone
 * [Google fonts](https://fonts.google.com/) - CDN for the fonts were used in the project.
 * [Balsamiq wireframe](https://balsamiq.com/) - To build wireframes in the design phase. 
 * [HTML Validator](https://validator.w3.org/) - Testing validity of HTML.
-* [CSS Validator](https://validator.w3.org/) -Testing validity of CSS.
-* [JSHint](https://jshint.com/)- Testing and checing JS. 
+* [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) -Testing validity of CSS.
+* [JSHint](https://jshint.com/)- Testing and checking JS. 
 * [Am I Responsive](http://ami.responsivedesign.is/#) - Checking the responsive nature.
 * [Beautifer](https://beautifier.io/) - Allowing me beautify my code.
 * [HTML Online](https://html-online.com/articles/smart-404-error-page-redirect/) - Redirect page Inspiration
@@ -433,7 +434,7 @@ Making a Local Clone
 ### Code:
 
 Code taken from EmailJS to initialise and to send emails : 
-    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <scripttype="text/javascript">
         (function() {
         emailjs.init("user_5I77sqs4w8AR9K52gjkiC");
