@@ -311,23 +311,25 @@ Tested for responsiveness using Chrome DevTools. Runs well on both IOS and Andro
 ### Performance Testing
 Tested on the Developer Tools Lighthouse.  
  
+*** 
 
 ### Testing User Stories
 
 
-* Doing research on visual stress either for themselves of for a family member - users can find some basic information about visual stress on the main homepage and further links on the resources page
-* Experiencing symptoms of visual stress and want to test themselves / child - users can test for signs of visual stress using the test. 
-* Trying to find out if using an overlay may increase their reading speed - users can select different colours overlays to see if they make a difference to their reading speed. 
+* *Doing research on visual stress either for themselves of for a family member* - users can find some basic information about visual stress on the main homepage and further links on the resources page
+* *Experiencing symptoms of visual stress and want to test themselves / child*- users can test for signs of visual stress using the test. 
+* *Trying to find out if using an overlay may increase their reading speed* - users can select different colours overlays to see if they make a difference to their reading speed. 
 
 
-#### What a user may want 
-* A way to check different coloured overlays  - using buttons above the test
-* A way to record down scores - build into the table as the test is carried out 
-* Information about places that offer additional services - more information on the resources page and sign posted in the advise columns at the bottom of the page
-* A way to receive their results - an email is sent to the user when fields filled out. 
-* Information about what their results mean  - adivse in the columns at the bottom of the page
-* To be able to buy overlays - not through the website but links provided in resources, could be a future feature.
-* A way to contact the the company to ask further questions - contact info supplied at the bottom of the page. 
+What a user may have wanted 
+
+* *A way to check different coloured overlays*  - using buttons above the test
+* *A way to record down scores* - build into the table as the test is carried out 
+* *Information about places that offer additional services* - more information on the resources page and sign posted in the advise columns at the bottom of the page
+* *A way to receive their results* - an email is sent to the user when fields filled out. 
+* *Information about what their results mean*  - adivse in the columns at the bottom of the page
+* *To be able to buy overlays* - not through the website but links provided in resources, could be a future feature.
+* *A way to contact the the company to ask further questions* - contact info supplied in the footer
 
 *** 
 
@@ -393,20 +395,64 @@ Making a Local Clone
 
 ## Known Bugs 
 
+* The test was building less than 300 words when it skipped a word. FIX if the word is skipped it adds 1 back to totalWords.  This mean there will always be 300 words displayed. 
 
 
 ***
 
 ## Acknowledgements
 
+
 ### Credit
 
+* Brian Macharia- Mentor support, guidance, tips, and key things to look out for throughout the project. Helping me to check for errors and looking at my code. 
+* Anthony Lomax - for testing and reporting any bugs.  For helping me figure out how to use EmailJS parameters effectively, for also being my soundboard when trying to troubleshoot errors. 
+* Callum Hewitt - Having a look at code and making some best practice suggestions.
+* Josie Evans - for testing the website from an opticians point of view and making suggestions on how I could make the website work better for real life users. 
+* Rob Beaney - for testing and minor styling suggestions.  
+* Harry Smith - Checking use on mobile devices.
+* David Savage - Testing usability. 
+* Matt Rudge - Template for gitpod.io 
+* [Code Institute SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
+* [Code Institute README Template](https://github.com/Code-Institute-Solutions/readme-template)
+* [W3schools](https://www.w3schools.com/) - for various code information and trouble shooting.
+* [Google fonts](https://fonts.google.com/) - CDN for the fonts were used in the project.
+* [Balsamiq wireframe](https://balsamiq.com/) - To build wireframes in the design phase. 
+* [HTML Validator](https://validator.w3.org/) - Testing validity of HTML.
+* [CSS Validator](https://validator.w3.org/) -Testing validity of CSS.
+* [JSHint](https://jshint.com/)- Testing and checing JS. 
+* [Am I Responsive](http://ami.responsivedesign.is/#) - Checking the responsive nature.
+* [Beautifer](https://beautifier.io/) - Allowing me beautify my code.
+* [HTML Online](https://html-online.com/articles/smart-404-error-page-redirect/) - Redirect page Inspiration
 
 
 
 *** 
 
+
 ### Code:
+
+Code taken from EmailJS to initialise and to send emails : 
+    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <scripttype="text/javascript">
+        (function() {
+        emailjs.init("user_5I77sqs4w8AR9K52gjkiC");
+        })();
+        </script>
+
+Code example used and modified for needs :
+    var templateParams = {
+    name: 'James',
+    notes: 'Check this out!'
+    };
+ 
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+        console.log('FAILED...', error);
+        });    
+
 
 
 ### Content:
