@@ -107,7 +107,7 @@ I have used black on white text in the testing area.  This is because black writ
 
 I have used another shade of pink for the link hovers. 
 
-I got Inspiration for my colour pallete from [Coolors](https://coolors.co/palettes/trending)
+I got inspiration for my colour pallete from [Coolors](https://coolors.co/palettes/trending)
 
 
 #### Typography 
@@ -116,7 +116,7 @@ I have chosen to use a font from [Google fonts](https://fonts.google.com/)  I ha
 
 I have used the default serif font for the test.  This is to encourage signs and symptoms of visual stress to show when taking the test. 
 
-For the headings I have inccreased the letter spacing to make it stand out. 
+For the headings I have increased the letter spacing to make it stand out. 
 
 I imported using the the following code at the top of my style.css file: 
 
@@ -280,11 +280,17 @@ Testing
 
 ## Testing 
     
-[HTML Validator](https://validator.w3.org/)
+[HTML Validator](https://validator.w3.org/) 
+
+Passed with no warnings on both pages
 
 [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
+Passed with warning using root colours, opted to keep as makes changes colours across the page much easier.
+
 [JSHint](https://jshint.com/)- Testing and checking JS. 
+
+No major warnings
 
 ### Usability Testing
 
@@ -311,6 +317,10 @@ Tested for responsiveness using Chrome DevTools. Runs well on both IOS and Andro
 
 ### Performance Testing
 Tested on the Developer Tools Lighthouse.  
+
+I used Lighthouse last in my testing to check for final things to improve and make sure eveything was working well.  I had not added rel= noopeners to my resources page, Dev Tools highlighted this and I made the adjustment. 
+
+![Dev Tools](readme-files/lighthouse.png)
  
 *** 
 
@@ -425,6 +435,7 @@ Making a Local Clone
 * [Am I Responsive](http://ami.responsivedesign.is/#) - Checking the responsive nature.
 * [Beautifer](https://beautifier.io/) - Allowing me beautify my code.
 * [HTML Online](https://html-online.com/articles/smart-404-error-page-redirect/) - Redirect page Inspiration
+* [Coolors](https://coolors.co/palettes/trending) - colour inspiration
 
 
 
@@ -455,13 +466,16 @@ Code example used and modified for needs :
         });    
 
 
-
 ### Content:
 
 Code & Content (not already attributed): Rebecca Kelsall
 
 ### Inspiration: 
 
+[ReadEz](https://www.readez.co.uk/aaa-overlay-test/)
+[Cargill Opticians](https://www.cargillsopticians.co.uk/our-services/specialist-services/i-o-o-institute-of-optometry-coloured-overlay-test/)
+[Colour2C](http://www.colour2c.co.uk/Example_Aqua.htm)
+[Read 123](https://www.read123.co.uk/en/online-visual-dyslexia-visual-stress-test/)
 
 
 
