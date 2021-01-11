@@ -82,23 +82,44 @@ const colors = [
     }
 ];
 
+
+function msieversion() {
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+    {
+        alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+    }
+    else  // If another browser, return 0
+    {
+        alert('otherbrowser');
+    }
+
+    return false;
+}
+
+// let userAgent = window.navigator.userAgent;
+// let isIE = /MSIE|Trident/.test(userAgent);
+// console.log("is ie")
+// console.log(userAgent)
+// if ( isIE ) {
+//   window.alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
+//   console.log("is ie")
+// }
+
+
 /** On page loaded event listener is added to the page and
  * buttons of overlays colours are automatically genereated. 
  * startBtn is also given event listener to start test. 
  * submitBtn is also given an event listener for calculator
  */
-const buildBtn = document.addEventListener('DOMContentLoaded', buildButtons);
+ const buildBtn = document.addEventListener('DOMContentLoaded', buildButtons);
 const startBtn = document.getElementById('start-btn');
 const submitBtn = document.getElementById("calculate-btn");
 startBtn.addEventListener('click', startTest); 
 submitBtn.addEventListener("click", calculator);
-
-const userAgent = window.navigator.userAgent;
-const isIE = /MSIE|Trident/.test(userAgent);
-
-if ( isIE ) {
-  alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
-}
 
 /** BuildButtons function builds the coloured overlay buttons
  * It takes the colors array and loops through
@@ -108,6 +129,7 @@ if ( isIE ) {
  * The button is then appended within the button div.
  * Calls the instruction button function 
  */
+
 function buildButtons() {
     
     for( let color of colors) {

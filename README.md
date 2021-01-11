@@ -287,7 +287,7 @@ Testing
 ### Usability Testing
 
 issue with alert blocking - changed to be innerhtml/countdown
-not working on internet Explorer
+not working on internet Explorer - added function to check and alert user if ie 
 
 [Wave](https://wave.webaim.org/) 
     
