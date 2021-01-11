@@ -262,19 +262,21 @@ If the user doesn't enter anything into the input fields, they will get a messag
 * Gitpod.io - for writing the code. Using the command line for committing and pushing to Git Hub
 * GitHub - hosting repositories
 * GIT - Pushing code to repositories
-* [EmailJS](https://www.emailjs.com/)
+* [EmailJS](https://www.emailjs.com/) - API sending emails to users
  
 Design 
 
 * [Google fonts](https://fonts.google.com/)  - for the font
 * [Balsamiq wireframe](https://balsamiq.com/)  - for creating the wireframes
 * [Beautifer](https://beautifier.io/) - for helping to keep code tidy
+* [Coolors](https://coolors.co/palettes/trending) - Colour Selection
 Testing 
 * [HTML Validator](https://validator.w3.org/) - checking the validity of code
 * [CSS Validator](https://validator.w3.org/) - checking the validity of code
 * [JSHint](https://jshint.com/)- Testing and checking JS.  - checking for errors in code
 * [Am I Responsive](http://ami.responsivedesign.is/#) - checking whether the site is responsive. 
-* [Wave](https://wave.webaim.org/) 
+* [Wave](https://wave.webaim.org/) - accessibility testing
+* [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php) - spell check
 * DEV Tools - Lighthouse
 
 ***
@@ -437,6 +439,7 @@ Making a Local Clone
 * [Beautifer](https://beautifier.io/) - Allowing me beautify my code.
 * [HTML Online](https://html-online.com/articles/smart-404-error-page-redirect/) - Redirect page Inspiration
 * [Coolors](https://coolors.co/palettes/trending) - colour inspiration
+* [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php) - spell check
 
 
 
