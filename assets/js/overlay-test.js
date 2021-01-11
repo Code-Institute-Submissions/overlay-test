@@ -93,6 +93,13 @@ const submitBtn = document.getElementById("calculate-btn");
 startBtn.addEventListener('click', startTest); 
 submitBtn.addEventListener("click", calculator);
 
+const userAgent = window.navigator.userAgent;
+const isIE = /MSIE|Trident/.test(userAgent);
+
+if ( isIE ) {
+  alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
+}
+
 /** BuildButtons function builds the coloured overlay buttons
  * It takes the colors array and loops through
  * Assigning the innerHTML name and an eventlistener
@@ -117,7 +124,6 @@ function buildButtons() {
     }
     instructionBtn();
 }
-
 
 /** Button that the user can click to see the instructions again
  * This calls the stop test function and reverts the classes
