@@ -83,31 +83,14 @@ const colors = [
 ];
 
 
-function msieversion() {
-
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
-    {
-        alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-    }
-    else  // If another browser, return 0
-    {
-        alert('otherbrowser');
-    }
-
-    return false;
+let userAgent = window.navigator.userAgent;
+let isIE = /MSIE|Trident/.test(userAgent);
+console.log("is ie")
+console.log(userAgent)
+if ( isIE ) {
+  window.alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
+  console.log("is ie")
 }
-
-// let userAgent = window.navigator.userAgent;
-// let isIE = /MSIE|Trident/.test(userAgent);
-// console.log("is ie")
-// console.log(userAgent)
-// if ( isIE ) {
-//   window.alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
-//   console.log("is ie")
-// }
 
 
 /** On page loaded event listener is added to the page and
