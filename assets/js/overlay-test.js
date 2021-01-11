@@ -82,16 +82,6 @@ const colors = [
     }
 ];
 
-let userAgent = window.navigator.userAgent;
-let isIE = /MSIE|Trident/.test(userAgent);
-console.log("is ie")
-console.log(userAgent)
-if ( isIE ) {
-  window.alert("It looks like you are using Internet Explorer, this test may not work on your browser please try an alternative.");
-  console.log("is ie")
-}
-
-
 /** On page loaded event listener is added to the page and
  * buttons of overlays colours are automatically genereated. 
  * startBtn is also given event listener to start test. 
