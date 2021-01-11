@@ -193,6 +193,8 @@ The website is fully responsive between different screen resolutions.  I have do
 * The test it self is not very suitable for a screen reader, this is because the test is designed for users to asses their reading speed.  
 * With this release you have to click on the word in order to get your results.  In future version it would be good to add the ability to use a key press as well for users unable to opperate a mouse. 
 
+###### Input Fields 
+
 ###### Footer 
 
 The Footer is split into three sections, an opening hours, copyright and contact. Although this is a testing website rather than a buisness users may want to get in contact with the website developers to let them know of any bugs or to ask questions about visual stress.   
@@ -237,6 +239,8 @@ I have used [EmailJS](https://www.emailjs.com/) to send the email to the user.  
 
 The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advise about what there % could mean and how they can get additional help and resources. 
 
+If the user doesn't enter anything into the input fields they will get a message saying to put numbers into both boxes.  
+
 ### Future Features 
 
 * Calculator result are also sent.  This could work by the user entering a baseline test and then the results table working out the reading % for each of the results. 
@@ -263,6 +267,7 @@ Design
 Testing 
 * [HTML Validator](https://validator.w3.org/) - checking the validity of code
 * [CSS Validator](https://validator.w3.org/) - checking the validity of code
+* [JS Validator](https://validatejavascript.com/) - checking for errors in code
 * [IE NetREnderer](https://netrenderer.com/index.php) - checking how the test works on different platforms
 * [Am I Responsive](http://ami.responsivedesign.is/#) - checking whether the site is responsive. 
 * [Wave](https://wave.webaim.org/) 

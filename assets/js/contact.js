@@ -8,6 +8,7 @@
  * name and email parameters are called from the form
  * The email is sent to the user using emailsJS 
  * Then the user recieves an alert to say it has been sent.   
+ This code has been taken and adapted form email.js documentation
  */
 
 function sendMail(resultsForm) {
@@ -28,6 +29,7 @@ function sendMail(resultsForm) {
         "results" : resultStr        
     })
     .then 
-    alert ("Email Sent")
-    return false;    
-};
+    alert ("Email Sent");
+    return false;  
+    
+}
