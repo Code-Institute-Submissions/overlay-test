@@ -311,7 +311,8 @@ label {
 input.number-input {
     width: 30%;
     margin: auto;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 input:hover {
@@ -361,7 +362,8 @@ footer {
     background-color: var(--blue-background);
     color: var(--sub-font-color);
     margin-top: 5%;
-    padding-bottom: 1px;
+    padding-bottom: 1%;
+    padding-top: 4%;
 }
 
 .footer-text p {
@@ -435,14 +437,19 @@ footer {
     }
 
     .text-center {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
     }
 
     .advise-col {
         width: 30%;
         display: inline-block;
         vertical-align: top;
+    }
+
+    footer {
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
     }
 
     footer>p {
