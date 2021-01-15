@@ -100,7 +100,6 @@ submitBtn.addEventListener("click", calculator);
  * The button is then appended within the button div.
  * Calls the instruction button function
  */
-
 function buildButtons() {
 
     for (let color of colors) {
@@ -121,7 +120,6 @@ function buildButtons() {
 /** Button that the user can click to see the instructions again
  * This calls the stop test function and reverts the classes
  */
-
 function instructionBtn() {
     let instructionBtn = document.createElement('button');
     instructionBtn.innerHTML = 'See Instructions';
@@ -291,7 +289,6 @@ function testResult(dataWordNumber) {
         createTable();
         createRow(dataWordNumber);
     }
-
     setTimeout(resultsAlert, 500);
 }
 

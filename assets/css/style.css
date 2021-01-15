@@ -333,7 +333,7 @@ td {
     padding-right: 1rem;
     padding-left: 1rem;
     background-color: rgb(247, 248, 203);
-    border: 1px solid rgb(1, 4, 46);
+    border: 1px solid rgb(2, 3, 19);
     border-radius: 2%;
     color: var(--blue-background);
 }
@@ -374,7 +374,6 @@ footer {
 }
 
 @media (min-width: 850px) {
-
     .symptoms-container {
         margin-right: 20%;
         margin-left: 20%;
@@ -458,7 +457,6 @@ footer {
 }
 
 @media (min-width: 1600px) {
-
     section {
         max-width: 1700px;
         margin: auto;
