@@ -109,7 +109,7 @@ function buildButtons() {
 
         button.innerHTML = color.name;
         button.className = 'overlay-btns';
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function(event) {
             overlay.style.backgroundColor = color.colorValue;
             overlay.dataset.colorName = color.name;
         });
@@ -249,10 +249,12 @@ function generateText() {
 
     for (let i = 0; i < totalWords; i++) {
         let thisWord = findWord();
-        let str = ` <span class='words' data-word-number=${i} onclick='testResult(this.getAttribute("data-word-number"))'>
-    ${thisWord}
-    </span>
-    `;
+        let str = ` 
+        <span class='words' data-word-number=${i} 
+            onclick='testResult(this.getAttribute("data-word-number"))'>
+            ${thisWord}
+        </span>
+        `;
         let findEndStr = paragraph.slice(-45);
         let skipWord = findEndStr.includes(thisWord);
 
@@ -366,7 +368,6 @@ function calculator() {
     let baseline = parseInt(document.getElementById("baseline").value);
     let speedincrease = document.getElementById("percentage-result");
     speedincrease.innerHTML = "";
-
 
     let increase = (topScore - baseline);
     increase = increase / baseline;
