@@ -153,6 +153,8 @@ The test runs best on larger screens but will also work on a mobile.  Even thoug
 
 I have styled containers and added padding and margins to ensure that the content it not to close together and everything can be seen clearly. 
 
+I designed the pages using balsamiq wireframes.  I have kept the design very close to the original plans. 
+
 #### Homepage Wire Frame 
 ![Home Page](readme-files/homepage.png)
 
@@ -184,7 +186,7 @@ The Navigation Bar is at the top of the webpage. The logo and nav links all chan
 
 ###### Responsiveness
 
-The website is fully responsive between different screen resolutions.  I have done this by using media queries.  I have changed the width and included content within containers so that everything stays neat and in the correct order. 
+The website is fully responsive between different screen resolutions.  I have done this by using media queries.  I have changed the width and included content within containers so that everything stays neat and in the correct order.  The test can be taken on a phone although it has been designed for large screens to mimic real word working conditions. 
 
 ###### Accessibility
 
@@ -303,7 +305,7 @@ On first testing a user commented that they wanted to know when the test was run
 
 A user commented that it would be nice to know how long was left on the test.  As a result, I added the countdown to the test to allow the users to know how much longer they had. 
 
-Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop.  
+Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
 
 A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
 
@@ -313,7 +315,7 @@ To ensure accessibility I ran the website through [Wave](https://wave.webaim.org
 
 Tested on Chrome, Firefox, Brave, Internet Explorer, Microsoft Edge, Safari.
 
-When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatible with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatible with Internet Explorer
+When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatible with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatible with Internet Explorer. 
 
 ### OS Compatibility
  iOS, Android 10, and Windows 10. -
@@ -441,6 +443,7 @@ Making a Local Clone
 * [HTML Online](https://html-online.com/articles/smart-404-error-page-redirect/) - Redirect page Inspiration
 * [Coolors](https://coolors.co/palettes/trending) - colour inspiration
 * [Internet Marketing Ninjas](https://www.internetmarketingninjas.com/online-spell-checker.php) - spell check
+* [EmailJS](https://www.emailjs.com/) - for use in sending emails
 
 
 
@@ -449,7 +452,7 @@ Making a Local Clone
 
 ### Code:
 
-Code taken from EmailJS to initialise and to send emails : 
+Code taken from [EmailJS](https://www.emailjs.com/) to initialise and to send emails : 
         <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <scripttype="text/javascript">
         (function() {
