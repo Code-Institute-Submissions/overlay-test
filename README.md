@@ -27,6 +27,7 @@ Currently there is a small choice of online overlay test most of which are basic
 I wanted to create a test that was closer to the type of test you would get from an optical professional.
 This test does not replace testing done by Optical professionals but may prove a useful tool for users who do not often see an Optometrist or users who may not have considered getting tested. 
 
+ The test is designed to be taken on a laptop or desktop; this is because usually visual stress occurs when reading longer passages of test.  We want to mimic the work, school, and study environment in the test.  Although some individuals do study from their phones this is not the norm.
 
 
 ## Index – Table of Contents
