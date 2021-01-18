@@ -49,8 +49,8 @@ This test does not replace testing done by Optical professionals but may prove a
 ### User Stories  
 
 #### Reasons a user may visit the website
-* Doing research on visual stress either for themselves of for a family member
-* Experiencing symptoms of visual stress and want to test themselves / child
+* Doing research on visual stress either for themselves or for a family member
+* Experiencing symptoms of visual stress and want to test themselves or child
 * Trying to find out if using an overlay may increase their reading speed
 
 #### Reasons for the website
@@ -103,7 +103,7 @@ The resources page will include links to places to buy overlay and get additiona
 #### Colour
 
 The colours I have used in the design are a mixture of two shades of blue and two shades of pink.   
-I have opted not to use red and green as this can be difficult for people that have a colour deficiency to see.  I used an off-white colour for the text on the dark background in the header and footer to make it stand
+I have opted not to use red and green as this can be difficult for people that have a colour deficiency to see.  I used an off-white colour for the text on the dark background in the header and footer to make it stand out
 
 I have used black on white text in the testing area.  This is because black writing on a white background can cause the worst symptoms of visual stress.   So, for the purpose of testing for signs of visual stress we want to create an environment where the symptoms are most likely to be present. 
 
@@ -214,7 +214,7 @@ I have added keywords, author and description to the meta data to make the websi
 
 ##### Redirect
 
-I have added a generic 404 page with a small amount of styling.  I have written the Java Script directly into the html so that there is no delay in redirecting the user.  
+I have added a generic 404 page with a small amount of styling.  I have written the JavaScript directly into the HTML so that there is no delay in redirecting the user.  
 
 
 *** 
@@ -243,7 +243,7 @@ I have used [EmailJS](https://www.emailjs.com/) to send the email to the user.  
 
 ###### Calculator
 
-The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advice about what there % could mean and how they can get additional help and resources. 
+The calculator works out whether there has been a change to the reading speed from a baseline score.  The user can use this calculator as many times as they would like.  Below the calculator is some advice about what their % could mean and how they can get additional help and resources. 
 
 If the user doesn't enter anything into the input fields, they will get a message saying to put numbers into both boxes.  
 
@@ -305,7 +305,7 @@ On first testing a user commented that they wanted to know when the test was run
 
 A user commented that it would be nice to know how long was left on the test.  As a result, I added the countdown to the test to allow the users to know how much longer they had. 
 
-Originally I had the user stop the test using an alert.  While this functioned okay on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
+Originally I had the user stop the test using an alert.  While this functioned as expected on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
 
 A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
 
@@ -315,7 +315,7 @@ To ensure accessibility I ran the website through [Wave](https://wave.webaim.org
 
 Tested on Chrome, Firefox, Brave, Internet Explorer, Microsoft Edge, Safari.
 
-When using Internet Explorer the test doesn't run, the buttons are not build and the colour scheme is not shown. This is because Internet Explorer is not compatible with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatible with Internet Explorer. 
+When using Internet Explorer the test doesn't run, the buttons are not built and the colour scheme is not shown. This is because Internet Explorer is not compatible with some of the latest JavaScript and CSS releases.  I have added a message at the bottom of the instructions to let users know to use an alternative browser to run the test.  In  a future releases of the project given more time I would like to make the test compatible with Internet Explorer. 
 
 ### OS Compatibility
  iOS, Android 10, and Windows 10. -
@@ -333,8 +333,8 @@ I used Lighthouse last in my testing to check for final things to improve and ma
 ### Testing User Stories
 
 
-* *Doing research on visual stress either for themselves of for a family member* - users can find some basic information about visual stress on the main homepage and further links on the resources page
-* *Experiencing symptoms of visual stress and want to test themselves / child*- users can test for signs of visual stress using the test. 
+* *Doing research on visual stress either for themselves or for a family member* - users can find some basic information about visual stress on the main homepage and further links on the resources page
+* *Experiencing symptoms of visual stress and want to test themselves or child*- users can test for signs of visual stress using the test. 
 * *Trying to find out if using an overlay may increase their reading speed* - users can select different colours overlays to see if they make a difference to their reading speed. 
 
 
