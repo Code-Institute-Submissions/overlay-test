@@ -98,8 +98,8 @@
             <table id="results-table"></table>
             <!-- Email to user Section -->
             <form onsubmit="return sendMail(this)" id="form-area">
-                <label for="name">Name: <input type="text" id="name" name="name" required></label>
-                <label for="email">Email: <input type="email" id="email" name="email" required></label>
+                <label for="name">Name: <input type="text" placeholder="Mary Jane" id="name" name="name" required></label>
+                <label for="email">Email: <input type="email" placeholder="Mary Jane" id="email" name="email" required></label>
                 <button id="email-btn" type="submit" class="results-area">Email My Results</button>
             </form>
         </div>
@@ -111,8 +111,8 @@
             </p>
             <!-- Calculator -->
             <div class="container">
-                <label for="baseline">Baseline :<input type="number" id="baseline" class="number-input"></label>
-                <label for="top-score">Top Score :<input type="number" id="top-score" class="number-input"></label>
+                <label for="baseline">Baseline :<input type="number" placeholder="23" id="baseline" class="number-input"></label>
+                <label for="top-score">Top Score :<input type="number" placeholder="32" id="top-score" class="number-input"></label>
                 <button id="calculate-btn" data-type="submit">Enter</button>
                 <p id="percentage-result"></p>
             </div>
