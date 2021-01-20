@@ -482,7 +482,7 @@ Code example used and modified for needs :
 
 Code & Content (not already attributed): Rebecca Kelsall
 
-### Inspiration: 
+### Inspiration & Research: 
 
 [ReadEz](https://www.readez.co.uk/aaa-overlay-test/)
 [Cargill Opticians](https://www.cargillsopticians.co.uk/our-services/specialist-services/i-o-o-institute-of-optometry-coloured-overlay-test/)
