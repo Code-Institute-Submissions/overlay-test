@@ -300,14 +300,15 @@ No major warnings
 
 ### Usability Testing
 
-When deployed I had friends and family check the usability of the website.  
-On first testing a user commented that they wanted to know when the test was running.  I added the stop start classes to the start button to display that the test was live. 
+When deployed I had friends and family check the usability of the website. 
 
-A user commented that it would be nice to know how long was left on the test.  As a result, I added the countdown to the test to allow the users to know how much longer they had. 
+On first testing a user commented that they wanted to know when the test was running. FIX I added the stop start classes to the start button to display that the test was live. 
 
-Originally I had the user stop the test using an alert.  While this functioned as expected on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached.  I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
+BUG A user commented that it would be nice to know how long was left on the test.  FIX added the countdown to the test to allow the users to know how much longer they had. 
 
-A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
+BUG Originally I had the user stop the test using an alert.  While this functioned as expected on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached. FIX I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
+
+BUG A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
 
 To ensure accessibility I ran the website through [Wave](https://wave.webaim.org/).   This showed that the contrast was not strong enough for links.  I changed the colour to a darker pink and on hover to blue to make it easier to see.
     
@@ -412,7 +413,9 @@ Making a Local Clone
 
 ## Known Bugs 
 
-* The test was building less than 300 words when it skipped a word. FIX if the word is skipped it adds 1 back to totalWords.  This mean there will always be 300 words displayed. 
+* BUG The test was building less than 300 words when it skipped a word. FIX if the word is skipped it adds 1 back to totalWords.  This mean there will always be 300 words displayed. 
+
+* BUG There was an issue with the emails not sending the correct information. FIX used a loop to iterate through all of the results.
 
 
 ***
