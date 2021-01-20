@@ -304,9 +304,9 @@ When deployed I had friends and family check the usability of the website.
 
 On first testing a user commented that they wanted to know when the test was running. FIX I added the stop start classes to the start button to display that the test was live. 
 
-BUG A user commented that it would be nice to know how long was left on the test.  FIX added the countdown to the test to allow the users to know how much longer they had. 
+A user commented that it would be nice to know how long was left on the test.  FIX added the countdown to the test to allow the users to know how much longer they had. 
 
-BUG Originally I had the user stop the test using an alert.  While this functioned as expected on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached. FIX I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
+Originally I had the user stop the test using an alert.  While this functioned as expected on desktop it blocked out the text on mobile devices, this made it difficult to remember what word was reached. FIX I change this to be a message above the text and added a coloured band to make it more obvious to stop. 
 
 BUG A user tried to use Internet Explorer for the test it would not work. Please see compatibility testing for more information.  
 
@@ -431,7 +431,8 @@ Making a Local Clone
 * Josie Evans - for testing the website from an optician's point of view and making suggestions on how I could make the website work better for real life users. 
 * Rob Beaney - for testing and minor styling suggestions.  
 * Harry Smith - Checking use on mobile devices.
-* David Savage - Testing usability. 
+* David Savage - Testing usability.
+* Karen Kelsall - using internet explorer. 
 * Matt Rudge - Template for gitpod.io 
 * [Code Institute SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
 * [Code Institute README Template](https://github.com/Code-Institute-Solutions/readme-template)
